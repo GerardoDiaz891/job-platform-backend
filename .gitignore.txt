@@ -1,0 +1,14 @@
+# Archivos de Visual Studio
+.vs/
+project-backend/bin/
+project-backend/obj/
+*.user
+*.suo
+
+# Dependencias de .NET
+project-backend/.vs/
+project-backend/.vscode/
+
+# Otros
+__pycache__/
+*.log
