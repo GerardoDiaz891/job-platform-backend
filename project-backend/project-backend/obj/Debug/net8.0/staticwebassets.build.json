@@ -1,0 +1,125 @@
+{
+  "Version": 1,
+  "Hash": "N0kazSdaSAZg/p5xqnhaH4Z9v48CTXP74tGl/CRDlsE=",
+  "Source": "project-backend",
+  "BasePath": "_content/project-backend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "project-backend\\wwwroot",
+      "Source": "project-backend",
+      "ContentRoot": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\",
+      "BasePath": "_content/project-backend",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\1c12be10-0f98-414a-9a42-a9f045aef707.pdf",
+      "SourceId": "project-backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\",
+      "BasePath": "_content/project-backend",
+      "RelativePath": "uploads/cvs/1c12be10-0f98-414a-9a42-a9f045aef707#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "jte6vzy3ke",
+      "Integrity": "h1v68elXz1xvPCLUXDayRjA83GRWJmCj27ZJhXVG8Is=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\cvs\\1c12be10-0f98-414a-9a42-a9f045aef707.pdf"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "uploads/cvs/1c12be10-0f98-414a-9a42-a9f045aef707.jte6vzy3ke.pdf",
+      "AssetFile": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\1c12be10-0f98-414a-9a42-a9f045aef707.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52625"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"h1v68elXz1xvPCLUXDayRjA83GRWJmCj27ZJhXVG8Is=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 18:09:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jte6vzy3ke"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/cvs/1c12be10-0f98-414a-9a42-a9f045aef707.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-h1v68elXz1xvPCLUXDayRjA83GRWJmCj27ZJhXVG8Is="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/cvs/1c12be10-0f98-414a-9a42-a9f045aef707.pdf",
+      "AssetFile": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\1c12be10-0f98-414a-9a42-a9f045aef707.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52625"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"h1v68elXz1xvPCLUXDayRjA83GRWJmCj27ZJhXVG8Is=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 18:09:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-h1v68elXz1xvPCLUXDayRjA83GRWJmCj27ZJhXVG8Is="
+        }
+      ]
+    }
+  ]
+}

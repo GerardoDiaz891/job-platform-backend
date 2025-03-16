@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "ManifestType": "Build",
+  "Endpoints": [
+    {
+      "Route": "uploads/cvs/1c12be10-0f98-414a-9a42-a9f045aef707.jte6vzy3ke.pdf",
+      "AssetFile": "uploads/cvs/1c12be10-0f98-414a-9a42-a9f045aef707.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52625"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"h1v68elXz1xvPCLUXDayRjA83GRWJmCj27ZJhXVG8Is=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 18:09:51 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jte6vzy3ke"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-h1v68elXz1xvPCLUXDayRjA83GRWJmCj27ZJhXVG8Is="
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/cvs/1c12be10-0f98-414a-9a42-a9f045aef707.pdf"
+        }
+      ]
+    },
+    {
+      "Route": "uploads/cvs/1c12be10-0f98-414a-9a42-a9f045aef707.pdf",
+      "AssetFile": "uploads/cvs/1c12be10-0f98-414a-9a42-a9f045aef707.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52625"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"h1v68elXz1xvPCLUXDayRjA83GRWJmCj27ZJhXVG8Is=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 18:09:51 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-h1v68elXz1xvPCLUXDayRjA83GRWJmCj27ZJhXVG8Is="
+        }
+      ]
+    }
+  ]
+}
