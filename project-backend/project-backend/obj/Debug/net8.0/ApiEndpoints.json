@@ -376,8 +376,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "vacante",
-        "Type": "project_backend.Models.Vacante",
+        "Name": "vacantedto",
+        "Type": "project_backend.DTOs.VacantesDTO",
         "IsRequired": true
       }
     ],

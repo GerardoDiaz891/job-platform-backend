@@ -641,17 +641,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Vacante"
+                "$ref": "#/components/schemas/VacantesDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Vacante"
+                "$ref": "#/components/schemas/VacantesDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Vacante"
+                "$ref": "#/components/schemas/VacantesDTO"
               }
             }
           }
@@ -799,7 +799,7 @@
             "type": "string",
             "format": "date-time"
           },
-          "usuarioId": {
+          "idUsuario": {
             "type": "integer",
             "format": "int32"
           },
@@ -842,7 +842,7 @@
             "type": "string",
             "nullable": true
           },
-          "rolId": {
+          "idRol": {
             "type": "integer",
             "format": "int32"
           },
@@ -873,15 +873,20 @@
             "type": "string",
             "nullable": true
           },
-          "vacantes": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Vacante"
-            },
+          "idCV": {
+            "type": "integer",
+            "format": "int32",
             "nullable": true
           },
           "cv": {
             "$ref": "#/components/schemas/CV"
+          },
+          "vacanteUsuarios": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VacanteUsuario"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -929,12 +934,87 @@
             "type": "string",
             "nullable": true
           },
-          "usuarioId": {
+          "vacanteUsuarios": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VacanteUsuario"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "VacanteUsuario": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idUsuario": {
             "type": "integer",
             "format": "int32"
           },
           "usuario": {
             "$ref": "#/components/schemas/Usuario"
+          },
+          "idVacante": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "vacante": {
+            "$ref": "#/components/schemas/Vacante"
+          }
+        },
+        "additionalProperties": false
+      },
+      "VacantesDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "salario": {
+            "type": "number",
+            "format": "double"
+          },
+          "horario": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaPublicacion": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "fechaExpiracion": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "habilidadesRequeridas": {
+            "type": "string",
+            "nullable": true
+          },
+          "ubicacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipoTrabajo": {
+            "type": "string",
+            "nullable": true
+          },
+          "usuarioId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
           }
         },
         "additionalProperties": false

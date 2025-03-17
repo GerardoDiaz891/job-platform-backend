@@ -14,9 +14,8 @@ namespace project_backend.Models
         public string HabilidadesRequeridas { get; set; }
         public string Ubicacion { get; set; }
         public string TipoTrabajo { get; set; } // "Remoto", "Presencial", "Híbrido"
-        
-        public virtual ICollection<VacanteUsuario> VacanteUsuarios { get; set; }
-        
-        
+
+        public virtual ICollection<VacanteUsuario> VacanteUsuarios { get; set; } = new List<VacanteUsuario>();
+
     }
 }

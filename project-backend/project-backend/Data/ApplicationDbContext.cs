@@ -32,7 +32,13 @@ namespace project_backend.Data
                 .HasForeignKey<CV>(c => c.IdUsuario) // Clave foránea en CV
                 .OnDelete(DeleteBehavior.Cascade); // Elimina el CV si se elimina el usuario
 
-            
+            // Configuración de la relación Usuario -> VacanteUsuario (muchos a muchos)
+            modelBuilder.Entity<Usuario>()
+                .HasMany(u => u.VacanteUsuarios)
+                .WithOne(vu => vu.Usuario)
+                .HasForeignKey(vu => vu.IdUsuario)
+                .OnDelete(DeleteBehavior.Cascade);
+
             // Configurar el nombre del rol como único
             modelBuilder.Entity<Rol>()
                 .HasIndex(r => r.Nombre)

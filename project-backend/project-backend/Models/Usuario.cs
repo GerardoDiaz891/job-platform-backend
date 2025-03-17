@@ -28,7 +28,7 @@ namespace project_backend.Models
         
         public int? IdCV { get; set; }
         public virtual CV? CV { get; set; }
-        
-        public virtual ICollection<VacanteUsuario> VacanteUsuarios { get; set; }
+
+        public virtual ICollection<VacanteUsuario> VacanteUsuarios { get; set; } = new List<VacanteUsuario>();
     }
 }
