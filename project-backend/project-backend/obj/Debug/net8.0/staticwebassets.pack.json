@@ -1,27 +1,27 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\1c12be10-0f98-414a-9a42-a9f045aef707.pdf",
-      "PackagePath": "staticwebassets\\uploads\\cvs\\1c12be10-0f98-414a-9a42-a9f045aef707.pdf"
+      "Id": "/Users/Rdia23/Desktop/BackF/job-platform-backend/project-backend/project-backend/wwwroot/uploads/cvs/1c12be10-0f98-414a-9a42-a9f045aef707.pdf",
+      "PackagePath": "staticwebassets/uploads/cvs/1c12be10-0f98-414a-9a42-a9f045aef707.pdf"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.project-backend.props",
+      "Id": "/Users/Rdia23/Desktop/BackF/job-platform-backend/project-backend/project-backend/wwwroot/uploads/cvs/58b6bbae-b69e-4db7-8197-56610684bedb.pdf",
+      "PackagePath": "staticwebassets/uploads/cvs/58b6bbae-b69e-4db7-8197-56610684bedb.pdf"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.project-backend.props",
       "PackagePath": "build\\project-backend.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.project-backend.props",
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.project-backend.props",
       "PackagePath": "buildMultiTargeting\\project-backend.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.project-backend.props",
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.project-backend.props",
       "PackagePath": "buildTransitive\\project-backend.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.project-backend.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
-      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
-    },
-    {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.project-backend.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.project-backend.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     }
   ],

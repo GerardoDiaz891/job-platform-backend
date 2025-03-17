@@ -33,16 +33,16 @@ namespace project_backend.Migrations
                     b.Property<DateTime>("FechaSubida")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("IdUsuario")
+                        .HasColumnType("int");
+
                     b.Property<string>("RutaArchivo")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("UsuarioId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("UsuarioId")
+                    b.HasIndex("IdUsuario")
                         .IsUnique();
 
                     b.ToTable("CVs");
@@ -90,15 +90,18 @@ namespace project_backend.Migrations
                     b.Property<string>("Direccion")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("IdCV")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdRol")
+                        .HasColumnType("int");
+
                     b.Property<string>("Nombre")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NombreEmpresa")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("RolId")
-                        .HasColumnType("int");
 
                     b.Property<string>("SitioWeb")
                         .HasColumnType("nvarchar(max)");
@@ -114,7 +117,7 @@ namespace project_backend.Migrations
                     b.HasIndex("Correo")
                         .IsUnique();
 
-                    b.HasIndex("RolId");
+                    b.HasIndex("IdRol");
 
                     b.ToTable("Usuarios");
                 });
@@ -160,21 +163,39 @@ namespace project_backend.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("UsuarioId")
+                    b.HasKey("Id");
+
+                    b.ToTable("Vacantes");
+                });
+
+            modelBuilder.Entity("project_backend.Models.VacanteUsuario", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("IdUsuario")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdVacante")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UsuarioId");
+                    b.HasIndex("IdUsuario");
 
-                    b.ToTable("Vacantes");
+                    b.HasIndex("IdVacante");
+
+                    b.ToTable("VacanteUsuario");
                 });
 
             modelBuilder.Entity("project_backend.Models.CV", b =>
                 {
                     b.HasOne("project_backend.Models.Usuario", "Usuario")
                         .WithOne("CV")
-                        .HasForeignKey("project_backend.Models.CV", "UsuarioId")
+                        .HasForeignKey("project_backend.Models.CV", "IdUsuario")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -185,29 +206,42 @@ namespace project_backend.Migrations
                 {
                     b.HasOne("project_backend.Models.Rol", "Rol")
                         .WithMany()
-                        .HasForeignKey("RolId")
+                        .HasForeignKey("IdRol")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Rol");
                 });
 
-            modelBuilder.Entity("project_backend.Models.Vacante", b =>
+            modelBuilder.Entity("project_backend.Models.VacanteUsuario", b =>
                 {
                     b.HasOne("project_backend.Models.Usuario", "Usuario")
-                        .WithMany("Vacantes")
-                        .HasForeignKey("UsuarioId")
+                        .WithMany("VacanteUsuarios")
+                        .HasForeignKey("IdUsuario")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("project_backend.Models.Vacante", "Vacante")
+                        .WithMany("VacanteUsuarios")
+                        .HasForeignKey("IdVacante")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Usuario");
+
+                    b.Navigation("Vacante");
                 });
 
             modelBuilder.Entity("project_backend.Models.Usuario", b =>
                 {
                     b.Navigation("CV");
 
-                    b.Navigation("Vacantes");
+                    b.Navigation("VacanteUsuarios");
+                });
+
+            modelBuilder.Entity("project_backend.Models.Vacante", b =>
+                {
+                    b.Navigation("VacanteUsuarios");
                 });
 #pragma warning restore 612, 618
         }

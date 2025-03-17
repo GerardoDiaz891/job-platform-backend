@@ -22,23 +22,17 @@ namespace project_backend.Data
             modelBuilder.Entity<Usuario>()
                 .HasOne(u => u.Rol) // Un Usuario tiene un Rol
                 .WithMany() // Un Rol puede tener muchos Usuarios (pero no se expone en el modelo Rol)
-                .HasForeignKey(u => u.RolId) // Clave foránea en Usuario
+                .HasForeignKey(u => u.IdRol) // Clave foránea en Usuario
                 .OnDelete(DeleteBehavior.Restrict); // Evita la eliminación en cascada
 
             // Configuración de la relación Usuario -> CV (uno a uno)
             modelBuilder.Entity<CV>()
                 .HasOne(c => c.Usuario) // Un CV tiene un Usuario
                 .WithOne(u => u.CV) // Un Usuario tiene un CV
-                .HasForeignKey<CV>(c => c.UsuarioId) // Clave foránea en CV
+                .HasForeignKey<CV>(c => c.IdUsuario) // Clave foránea en CV
                 .OnDelete(DeleteBehavior.Cascade); // Elimina el CV si se elimina el usuario
 
-            // Configuración de la relación Usuario -> Vacante (uno a muchos)
-            modelBuilder.Entity<Vacante>()
-                .HasOne(v => v.Usuario) // Una Vacante tiene un Usuario
-                .WithMany(u => u.Vacantes) // Un Usuario puede tener muchas Vacantes
-                .HasForeignKey(v => v.UsuarioId) // Clave foránea en Vacante
-                .OnDelete(DeleteBehavior.Cascade); // Elimina las vacantes si se elimina el usuario
-
+            
             // Configurar el nombre del rol como único
             modelBuilder.Entity<Rol>()
                 .HasIndex(r => r.Nombre)

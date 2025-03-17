@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Configurar autenticación JWT
+// Configurar autenticaciï¿½n JWT
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
@@ -25,6 +25,19 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
         };
     });
+
+//CORS para conectar
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowOrigins",
+        builder =>
+        {
+            builder.WithOrigins("http://localhost:5173") 
+                .AllowAnyHeader()
+                .AllowAnyMethod();
+        });
+});
+
 
 builder.Services.AddAuthorization();
 
@@ -42,12 +55,15 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+//Habilitar CORS
+app.UseCors("AllowOrigins");
+
 app.UseHttpsRedirection();
 
-// Habilitar el middleware para servir archivos estáticos
+// Habilitar el middleware para servir archivos estï¿½ticos
 app.UseStaticFiles();
 
-app.UseAuthentication(); // Asegúrate de que esto esté antes de UseAuthorization
+app.UseAuthentication(); // Asegï¿½rate de que esto estï¿½ antes de UseAuthorization
 app.UseAuthorization();
 
 app.MapControllers();

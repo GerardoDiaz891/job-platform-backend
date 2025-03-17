@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using project_backend.Data;
+using project_backend.DTOs;
 using project_backend.Models;
 
 namespace project_backend.Controllers
@@ -76,8 +77,31 @@ namespace project_backend.Controllers
         // POST: api/Vacantes
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Vacante>> PostVacante(Vacante vacante)
-        {
+        public async Task<ActionResult<Vacante>> PostVacante(VacantesDTO vacantedto)
+        {   
+            Vacante vacante = new ()
+            {
+                Nombre = vacantedto.Nombre,
+                Descripcion = vacantedto.Descripcion,
+                Salario = vacantedto.Salario,
+                Horario = vacantedto.Horario,
+                FechaPublicacion = DateTime.Now, 
+                FechaExpiracion = vacantedto.FechaExpiracion,
+                HabilidadesRequeridas = vacantedto.HabilidadesRequeridas,
+                Ubicacion = vacantedto.Ubicacion,
+                TipoTrabajo = vacantedto.TipoTrabajo,
+                
+            };
+            if(vacantedto.UsuarioId != null)
+            {
+                VacanteUsuario vacanteusuario = new()
+                {
+
+                    IdUsuario = (int)vacantedto.UsuarioId,
+                    IdVacante = vacante.Id,
+                };
+            }
+            
             _context.Vacantes.Add(vacante);
             await _context.SaveChangesAsync();
 

@@ -79,7 +79,7 @@ namespace project_backend.Controllers
         public async Task<ActionResult<Usuario>> PostUsuario(Usuario usuario)
         {
             // Verificar si el rol existe
-            var rolExistente = await _context.Roles.FindAsync(usuario.RolId);
+            var rolExistente = await _context.Roles.FindAsync(usuario.IdRol);
             if (rolExistente == null)
             {
                 return BadRequest("El rol especificado no existe.");

@@ -127,7 +127,7 @@ namespace project_backend.Controllers
             {
                 RutaArchivo = fileName, // Guardar solo el nombre del archivo
                 FechaSubida = DateTime.UtcNow,
-                UsuarioId = usuarioId
+                IdUsuario = usuarioId
             };
 
             _context.CVs.Add(cv);
