@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
+using BCrypt.Net;
 
 namespace project_backend.Models
 {
@@ -30,5 +31,17 @@ namespace project_backend.Models
         public virtual CV? CV { get; set; }
 
         public virtual ICollection<VacanteUsuario> VacanteUsuarios { get; set; } = new List<VacanteUsuario>();
+
+        // Método para hashear la contraseña
+        public void SetPassword(string password)
+        {
+            Contraseña = BCrypt.Net.BCrypt.HashPassword(password);
+        }
+
+        // Método para verificar la contraseña
+        public bool VerifyPassword(string password)
+        {
+            return BCrypt.Net.BCrypt.Verify(password, Contraseña);
+        }
     }
 }

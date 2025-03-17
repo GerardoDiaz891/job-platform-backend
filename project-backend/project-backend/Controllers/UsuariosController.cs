@@ -85,6 +85,9 @@ namespace project_backend.Controllers
                 return BadRequest("El rol especificado no existe.");
             }
 
+            // Hashear la contraseña antes de guardar el usuario
+            usuario.SetPassword(usuario.Contraseña);
+
             // Asignar el Rol existente al usuario
             usuario.Rol = rolExistente;
 

@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "project_backend.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "project_backend.Controllers.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "project_backend.Controllers.CVsController",
     "Method": "GetCVs",
     "RelativePath": "api/CVs",
