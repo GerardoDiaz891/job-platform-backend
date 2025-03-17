@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1CvdCp5uPGiVnsiOKYHA61UU5K7NW7LzyHh+xkXc34g=",
+  "Hash": "bTtW13bTPdPZHAZMxoVGZ5gxjvqBfCHdfSg6FdYXlNY=",
   "Source": "project-backend",
   "BasePath": "_content/project-backend",
   "Mode": "Default",
@@ -57,6 +57,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\cvs\\58b6bbae-b69e-4db7-8197-56610684bedb.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\74f234f0-73bf-4ca9-a4e8-30750b0290c6.pdf",
+      "SourceId": "project-backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\",
+      "BasePath": "_content/project-backend",
+      "RelativePath": "uploads/cvs/74f234f0-73bf-4ca9-a4e8-30750b0290c6#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "lwdrlkg4vz",
+      "Integrity": "23uY49SnRdyjG5S5yW1un1Vr5G/dMmsoBCOVufJt8RY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\cvs\\74f234f0-73bf-4ca9-a4e8-30750b0290c6.pdf"
     }
   ],
   "Endpoints": [
@@ -221,6 +242,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-h1v68elXz1xvPCLUXDayRjA83GRWJmCj27ZJhXVG8Is="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/cvs/74f234f0-73bf-4ca9-a4e8-30750b0290c6.lwdrlkg4vz.pdf",
+      "AssetFile": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\74f234f0-73bf-4ca9-a4e8-30750b0290c6.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "181500"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"23uY49SnRdyjG5S5yW1un1Vr5G/dMmsoBCOVufJt8RY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 20:46:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lwdrlkg4vz"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/cvs/74f234f0-73bf-4ca9-a4e8-30750b0290c6.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-23uY49SnRdyjG5S5yW1un1Vr5G/dMmsoBCOVufJt8RY="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/cvs/74f234f0-73bf-4ca9-a4e8-30750b0290c6.pdf",
+      "AssetFile": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\74f234f0-73bf-4ca9-a4e8-30750b0290c6.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "181500"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"23uY49SnRdyjG5S5yW1un1Vr5G/dMmsoBCOVufJt8RY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 20:46:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-23uY49SnRdyjG5S5yW1un1Vr5G/dMmsoBCOVufJt8RY="
         }
       ]
     }

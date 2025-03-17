@@ -59,8 +59,7 @@
               "RelativeToolTip": "project-backend\\Data\\ApplicationDbContext.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAuwCgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T19:47:32.342Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-17T19:47:32.342Z"
             },
             {
               "$type": "Document",
@@ -72,8 +71,7 @@
               "RelativeToolTip": "project-backend\\Models\\Usuario.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAA2wCAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T19:45:51.538Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-17T19:45:51.538Z"
             },
             {
               "$type": "Document",
@@ -85,8 +83,7 @@
               "RelativeToolTip": "project-backend\\Models\\Vacante.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAowBMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T23:23:07.578Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-13T23:23:07.578Z"
             },
             {
               "$type": "Document",
@@ -98,8 +95,7 @@
               "RelativeToolTip": "project-backend\\Models\\VacanteUsuario.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAIwAUAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T19:28:15.93Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-17T19:28:15.93Z"
             },
             {
               "$type": "Document",
@@ -111,8 +107,7 @@
               "RelativeToolTip": "project-backend\\Controllers\\UsuariosController.cs",
               "ViewState": "AgIAAGMAAAAAAAAAAAAmwGcAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T00:06:22.897Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-14T00:06:22.897Z"
             }
           ]
         }

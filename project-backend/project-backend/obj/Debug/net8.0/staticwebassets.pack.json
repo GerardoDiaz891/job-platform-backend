@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\uploads\\cvs\\58b6bbae-b69e-4db7-8197-56610684bedb.pdf"
     },
     {
+      "Id": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\74f234f0-73bf-4ca9-a4e8-30750b0290c6.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cvs\\74f234f0-73bf-4ca9-a4e8-30750b0290c6.pdf"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.project-backend.props",
       "PackagePath": "build\\project-backend.props"
     },
