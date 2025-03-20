@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using project_backend.Data;
 using project_backend.Models;
+using project_backend.DTOs;
 
 namespace project_backend.Controllers
 {
@@ -23,14 +24,21 @@ namespace project_backend.Controllers
 
         // GET: api/Rols
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Rol>>> GetRoles()
+        public async Task<ActionResult<IEnumerable<RolDTO>>> GetRoles()
         {
-            return await _context.Roles.ToListAsync();
+            var roles = await _context.Roles.ToListAsync();
+            var rolesDTO = roles.Select(r => new RolDTO
+            {
+                Id = r.Id,
+                Nombre = r.Nombre
+            }).ToList();
+
+            return Ok(rolesDTO);
         }
 
         // GET: api/Rols/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Rol>> GetRol(int id)
+        public async Task<ActionResult<RolDTO>> GetRol(int id)
         {
             var rol = await _context.Roles.FindAsync(id);
 
@@ -39,18 +47,29 @@ namespace project_backend.Controllers
                 return NotFound();
             }
 
-            return rol;
+            var rolDTO = new RolDTO
+            {
+                Id = rol.Id,
+                Nombre = rol.Nombre
+            };
+
+            return Ok(rolDTO);
         }
 
         // PUT: api/Rols/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutRol(int id, Rol rol)
+        public async Task<IActionResult> PutRol(int id, RolDTO rolDTO)
         {
-            if (id != rol.Id)
+            if (id != rolDTO.Id)
             {
                 return BadRequest();
             }
+
+            var rol = new Rol
+            {
+                Id = rolDTO.Id,
+                Nombre = rolDTO.Nombre
+            };
 
             _context.Entry(rol).State = EntityState.Modified;
 
@@ -74,14 +93,24 @@ namespace project_backend.Controllers
         }
 
         // POST: api/Rols
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Rol>> PostRol(Rol rol)
+        public async Task<ActionResult<RolDTO>> PostRol(RolDTO rolDTO)
         {
+            var rol = new Rol
+            {
+                Nombre = rolDTO.Nombre
+            };
+
             _context.Roles.Add(rol);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetRol", new { id = rol.Id }, rol);
+            var nuevoRolDTO = new RolDTO
+            {
+                Id = rol.Id,
+                Nombre = rol.Nombre
+            };
+
+            return CreatedAtAction("GetRol", new { id = nuevoRolDTO.Id }, nuevoRolDTO);
         }
 
         // DELETE: api/Rols/5

@@ -16,6 +16,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "project_backend.Controllers.AuthController",
+    "Method": "Register",
+    "RelativePath": "api/Auth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuarioDTO",
+        "Type": "project_backend.DTOs.UsuarioDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "project_backend.DTOs.UsuarioDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "project_backend.Controllers.CVsController",
     "Method": "GetCVs",
     "RelativePath": "api/CVs",
@@ -25,7 +51,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[project_backend.Models.CV, project-backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[project_backend.DTOs.CVDTO, project-backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -51,7 +77,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "project_backend.Models.CV",
+        "Type": "project_backend.DTOs.CVDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -75,8 +101,8 @@
         "IsRequired": true
       },
       {
-        "Name": "cV",
-        "Type": "project_backend.Models.CV",
+        "Name": "cvDTO",
+        "Type": "project_backend.DTOs.CVDTO",
         "IsRequired": true
       }
     ],
@@ -135,7 +161,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "project_backend.Models.CV",
+        "Type": "project_backend.DTOs.CVDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -155,7 +181,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[project_backend.Models.Rol, project-backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[project_backend.DTOs.RolDTO, project-backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -174,14 +200,14 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "rol",
-        "Type": "project_backend.Models.Rol",
+        "Name": "rolDTO",
+        "Type": "project_backend.DTOs.RolDTO",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "project_backend.Models.Rol",
+        "Type": "project_backend.DTOs.RolDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -207,7 +233,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "project_backend.Models.Rol",
+        "Type": "project_backend.DTOs.RolDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -231,8 +257,8 @@
         "IsRequired": true
       },
       {
-        "Name": "rol",
-        "Type": "project_backend.Models.Rol",
+        "Name": "rolDTO",
+        "Type": "project_backend.DTOs.RolDTO",
         "IsRequired": true
       }
     ],
@@ -264,7 +290,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[project_backend.Models.Usuario, project-backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[project_backend.DTOs.UsuarioDTO, project-backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -283,14 +309,14 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "usuario",
-        "Type": "project_backend.Models.Usuario",
+        "Name": "usuarioDTO",
+        "Type": "project_backend.DTOs.UsuarioDTO",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "project_backend.Models.Usuario",
+        "Type": "project_backend.DTOs.UsuarioDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -316,7 +342,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "project_backend.Models.Usuario",
+        "Type": "project_backend.DTOs.UsuarioDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -340,8 +366,8 @@
         "IsRequired": true
       },
       {
-        "Name": "usuario",
-        "Type": "project_backend.Models.Usuario",
+        "Name": "usuarioDTO",
+        "Type": "project_backend.DTOs.UsuarioDTO",
         "IsRequired": true
       }
     ],

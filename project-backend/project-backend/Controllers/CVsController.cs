@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using project_backend.Data;
 using project_backend.Models;
+using project_backend.DTOs;
 
 namespace project_backend.Controllers
 {
@@ -17,46 +18,70 @@ namespace project_backend.Controllers
     public class CVsController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
-        private readonly IWebHostEnvironment _env; // Declarar _env
+        private readonly IWebHostEnvironment _env;
 
         public CVsController(ApplicationDbContext context, IWebHostEnvironment env)
         {
             _context = context;
-            _env = env; // Inyectar IWebHostEnvironment
+            _env = env;
         }
 
         // GET: api/CVs
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<CV>>> GetCVs()
+        public async Task<ActionResult<IEnumerable<CVDTO>>> GetCVs()
         {
-            return await _context.CVs.ToListAsync();
+            var cvs = await _context.CVs.ToListAsync();
+            var cvsDTO = cvs.Select(cv => new CVDTO
+            {
+                Id = cv.Id,
+                RutaArchivo = cv.RutaArchivo,
+                FechaSubida = cv.FechaSubida,
+                IdUsuario = cv.IdUsuario
+            }).ToList();
+
+            return Ok(cvsDTO);
         }
 
         // GET: api/CVs/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<CV>> GetCV(int id)
+        public async Task<ActionResult<CVDTO>> GetCV(int id)
         {
-            var cV = await _context.CVs.FindAsync(id);
+            var cv = await _context.CVs.FindAsync(id);
 
-            if (cV == null)
+            if (cv == null)
             {
                 return NotFound();
             }
 
-            return cV;
+            var cvDTO = new CVDTO
+            {
+                Id = cv.Id,
+                RutaArchivo = cv.RutaArchivo,
+                FechaSubida = cv.FechaSubida,
+                IdUsuario = cv.IdUsuario
+            };
+
+            return Ok(cvDTO);
         }
 
         // PUT: api/CVs/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutCV(int id, CV cV)
+        public async Task<IActionResult> PutCV(int id, CVDTO cvDTO)
         {
-            if (id != cV.Id)
+            if (id != cvDTO.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(cV).State = EntityState.Modified;
+            var cv = new CV
+            {
+                Id = cvDTO.Id,
+                RutaArchivo = cvDTO.RutaArchivo,
+                FechaSubida = cvDTO.FechaSubida,
+                IdUsuario = cvDTO.IdUsuario
+            };
+
+            _context.Entry(cv).State = EntityState.Modified;
 
             try
             {
@@ -79,7 +104,7 @@ namespace project_backend.Controllers
 
         // Método para subir un archivo PDF
         [HttpPost("upload")]
-        public async Task<ActionResult<CV>> UploadCV(IFormFile file, int usuarioId)
+        public async Task<ActionResult<CVDTO>> UploadCV(IFormFile file, int usuarioId)
         {
             if (file == null || file.Length == 0)
             {
@@ -133,7 +158,16 @@ namespace project_backend.Controllers
             _context.CVs.Add(cv);
             await _context.SaveChangesAsync();
 
-            return Ok(new { cv.Id, cv.RutaArchivo, cv.FechaSubida });
+            // Crear el DTO de respuesta
+            var cvDTO = new CVDTO
+            {
+                Id = cv.Id,
+                RutaArchivo = cv.RutaArchivo,
+                FechaSubida = cv.FechaSubida,
+                IdUsuario = cv.IdUsuario
+            };
+
+            return Ok(cvDTO);
         }
 
         // Método para descargar un archivo PDF

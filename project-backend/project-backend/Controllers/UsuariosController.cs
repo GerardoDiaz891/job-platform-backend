@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using project_backend.Data;
 using project_backend.Models;
+using project_backend.DTOs;
 
 namespace project_backend.Controllers
 {
@@ -23,34 +24,87 @@ namespace project_backend.Controllers
 
         // GET: api/Usuarios
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Usuario>>> GetUsuarios()
+        public async Task<ActionResult<IEnumerable<UsuarioDTO>>> GetUsuarios()
         {
-            return await _context.Usuarios.ToListAsync();
+            var usuarios = await _context.Usuarios
+                .Include(u => u.Rol) // Incluir el Rol para obtener el nombre
+                .ToListAsync();
+
+            var usuariosDTO = usuarios.Select(u => new UsuarioDTO
+            {
+                Id = u.Id,
+                Nombre = u.Nombre,
+                Correo = u.Correo,
+                IdRol = u.IdRol,
+                NombreRol = u.Rol?.Nombre, // Nombre del Rol
+                NombreEmpresa = u.NombreEmpresa,
+                TipoEmpresa = u.TipoEmpresa,
+                Direccion = u.Direccion,
+                Telefono = u.Telefono,
+                SitioWeb = u.SitioWeb,
+                DescripcionEmpresa = u.DescripcionEmpresa,
+                IdCV = u.IdCV
+            }).ToList();
+
+            return Ok(usuariosDTO);
         }
 
         // GET: api/Usuarios/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Usuario>> GetUsuario(int id)
+        public async Task<ActionResult<UsuarioDTO>> GetUsuario(int id)
         {
-            var usuario = await _context.Usuarios.FindAsync(id);
+            var usuario = await _context.Usuarios
+                .Include(u => u.Rol) // Incluir el Rol para obtener el nombre
+                .FirstOrDefaultAsync(u => u.Id == id);
 
             if (usuario == null)
             {
                 return NotFound();
             }
 
-            return usuario;
+            var usuarioDTO = new UsuarioDTO
+            {
+                Id = usuario.Id,
+                Nombre = usuario.Nombre,
+                Correo = usuario.Correo,
+                IdRol = usuario.IdRol,
+                NombreRol = usuario.Rol?.Nombre, // Nombre del Rol
+                NombreEmpresa = usuario.NombreEmpresa,
+                TipoEmpresa = usuario.TipoEmpresa,
+                Direccion = usuario.Direccion,
+                Telefono = usuario.Telefono,
+                SitioWeb = usuario.SitioWeb,
+                DescripcionEmpresa = usuario.DescripcionEmpresa,
+                IdCV = usuario.IdCV
+            };
+
+            return Ok(usuarioDTO);
         }
 
         // PUT: api/Usuarios/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutUsuario(int id, Usuario usuario)
+        public async Task<IActionResult> PutUsuario(int id, UsuarioDTO usuarioDTO)
         {
-            if (id != usuario.Id)
+            if (id != usuarioDTO.Id)
             {
                 return BadRequest();
             }
+
+            var usuario = new Usuario
+            {
+                Id = usuarioDTO.Id,
+                Nombre = usuarioDTO.Nombre,
+                Correo = usuarioDTO.Correo,
+                Contraseña = usuarioDTO.Contraseña, // Asegúrate de hashear la contraseña si es necesario
+                IdRol = usuarioDTO.IdRol,
+                NombreEmpresa = usuarioDTO.NombreEmpresa,
+                TipoEmpresa = usuarioDTO.TipoEmpresa,
+                Direccion = usuarioDTO.Direccion,
+                Telefono = usuarioDTO.Telefono,
+                SitioWeb = usuarioDTO.SitioWeb,
+                DescripcionEmpresa = usuarioDTO.DescripcionEmpresa,
+                IdCV = usuarioDTO.IdCV
+            };
 
             _context.Entry(usuario).State = EntityState.Modified;
 
@@ -74,16 +128,31 @@ namespace project_backend.Controllers
         }
 
         // POST: api/Usuarios
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Usuario>> PostUsuario(Usuario usuario)
+        public async Task<ActionResult<UsuarioDTO>> PostUsuario(UsuarioDTO usuarioDTO)
         {
             // Verificar si el rol existe
-            var rolExistente = await _context.Roles.FindAsync(usuario.IdRol);
+            var rolExistente = await _context.Roles.FindAsync(usuarioDTO.IdRol);
             if (rolExistente == null)
             {
                 return BadRequest("El rol especificado no existe.");
             }
+
+            // Crear el usuario a partir del DTO
+            var usuario = new Usuario
+            {
+                Nombre = usuarioDTO.Nombre,
+                Correo = usuarioDTO.Correo,
+                Contraseña = usuarioDTO.Contraseña, // HASHEAR CONTRASEÑAS
+                IdRol = usuarioDTO.IdRol,
+                NombreEmpresa = usuarioDTO.NombreEmpresa,
+                TipoEmpresa = usuarioDTO.TipoEmpresa,
+                Direccion = usuarioDTO.Direccion,
+                Telefono = usuarioDTO.Telefono,
+                SitioWeb = usuarioDTO.SitioWeb,
+                DescripcionEmpresa = usuarioDTO.DescripcionEmpresa,
+                IdCV = usuarioDTO.IdCV
+            };
 
             // Hashear la contraseña antes de guardar el usuario
             usuario.SetPassword(usuario.Contraseña);
@@ -95,8 +164,24 @@ namespace project_backend.Controllers
             _context.Usuarios.Add(usuario);
             await _context.SaveChangesAsync();
 
-            // Retornar la respuesta con el usuario creado
-            return CreatedAtAction("GetUsuario", new { id = usuario.Id }, usuario);
+            // Crear el DTO de respuesta
+            var nuevoUsuarioDTO = new UsuarioDTO
+            {
+                Id = usuario.Id,
+                Nombre = usuario.Nombre,
+                Correo = usuario.Correo,
+                IdRol = usuario.IdRol,
+                NombreRol = usuario.Rol?.Nombre,
+                NombreEmpresa = usuario.NombreEmpresa,
+                TipoEmpresa = usuario.TipoEmpresa,
+                Direccion = usuario.Direccion,
+                Telefono = usuario.Telefono,
+                SitioWeb = usuario.SitioWeb,
+                DescripcionEmpresa = usuario.DescripcionEmpresa,
+                IdCV = usuario.IdCV
+            };
+
+            return CreatedAtAction("GetUsuario", new { id = nuevoUsuarioDTO.Id }, nuevoUsuarioDTO);
         }
 
         // DELETE: api/Usuarios/5

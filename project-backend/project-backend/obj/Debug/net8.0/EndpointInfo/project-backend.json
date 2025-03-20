@@ -36,6 +36,54 @@
         }
       }
     },
+    "/api/Auth/register": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UsuarioDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UsuarioDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UsuarioDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UsuarioDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UsuarioDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UsuarioDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/CVs": {
       "get": {
         "tags": [
@@ -49,7 +97,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/CV"
+                    "$ref": "#/components/schemas/CVDTO"
                   }
                 }
               },
@@ -57,7 +105,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/CV"
+                    "$ref": "#/components/schemas/CVDTO"
                   }
                 }
               },
@@ -65,7 +113,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/CV"
+                    "$ref": "#/components/schemas/CVDTO"
                   }
                 }
               }
@@ -96,17 +144,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/CV"
+                  "$ref": "#/components/schemas/CVDTO"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CV"
+                  "$ref": "#/components/schemas/CVDTO"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CV"
+                  "$ref": "#/components/schemas/CVDTO"
                 }
               }
             }
@@ -132,17 +180,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CV"
+                "$ref": "#/components/schemas/CVDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CV"
+                "$ref": "#/components/schemas/CVDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CV"
+                "$ref": "#/components/schemas/CVDTO"
               }
             }
           }
@@ -216,17 +264,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/CV"
+                  "$ref": "#/components/schemas/CVDTO"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CV"
+                  "$ref": "#/components/schemas/CVDTO"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CV"
+                  "$ref": "#/components/schemas/CVDTO"
                 }
               }
             }
@@ -270,7 +318,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Rol"
+                    "$ref": "#/components/schemas/RolDTO"
                   }
                 }
               },
@@ -278,7 +326,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Rol"
+                    "$ref": "#/components/schemas/RolDTO"
                   }
                 }
               },
@@ -286,7 +334,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Rol"
+                    "$ref": "#/components/schemas/RolDTO"
                   }
                 }
               }
@@ -302,17 +350,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Rol"
+                "$ref": "#/components/schemas/RolDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Rol"
+                "$ref": "#/components/schemas/RolDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Rol"
+                "$ref": "#/components/schemas/RolDTO"
               }
             }
           }
@@ -323,17 +371,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/Rol"
+                  "$ref": "#/components/schemas/RolDTO"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Rol"
+                  "$ref": "#/components/schemas/RolDTO"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Rol"
+                  "$ref": "#/components/schemas/RolDTO"
                 }
               }
             }
@@ -363,17 +411,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/Rol"
+                  "$ref": "#/components/schemas/RolDTO"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Rol"
+                  "$ref": "#/components/schemas/RolDTO"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Rol"
+                  "$ref": "#/components/schemas/RolDTO"
                 }
               }
             }
@@ -399,17 +447,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Rol"
+                "$ref": "#/components/schemas/RolDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Rol"
+                "$ref": "#/components/schemas/RolDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Rol"
+                "$ref": "#/components/schemas/RolDTO"
               }
             }
           }
@@ -455,7 +503,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Usuario"
+                    "$ref": "#/components/schemas/UsuarioDTO"
                   }
                 }
               },
@@ -463,7 +511,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Usuario"
+                    "$ref": "#/components/schemas/UsuarioDTO"
                   }
                 }
               },
@@ -471,7 +519,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Usuario"
+                    "$ref": "#/components/schemas/UsuarioDTO"
                   }
                 }
               }
@@ -487,17 +535,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Usuario"
+                "$ref": "#/components/schemas/UsuarioDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Usuario"
+                "$ref": "#/components/schemas/UsuarioDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Usuario"
+                "$ref": "#/components/schemas/UsuarioDTO"
               }
             }
           }
@@ -508,17 +556,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/Usuario"
+                  "$ref": "#/components/schemas/UsuarioDTO"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Usuario"
+                  "$ref": "#/components/schemas/UsuarioDTO"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Usuario"
+                  "$ref": "#/components/schemas/UsuarioDTO"
                 }
               }
             }
@@ -548,17 +596,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/Usuario"
+                  "$ref": "#/components/schemas/UsuarioDTO"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Usuario"
+                  "$ref": "#/components/schemas/UsuarioDTO"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Usuario"
+                  "$ref": "#/components/schemas/UsuarioDTO"
                 }
               }
             }
@@ -584,17 +632,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Usuario"
+                "$ref": "#/components/schemas/UsuarioDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Usuario"
+                "$ref": "#/components/schemas/UsuarioDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Usuario"
+                "$ref": "#/components/schemas/UsuarioDTO"
               }
             }
           }
@@ -840,6 +888,28 @@
         },
         "additionalProperties": false
       },
+      "CVDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "rutaArchivo": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaSubida": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "idUsuario": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
       "LoginRequest": {
         "type": "object",
         "properties": {
@@ -855,6 +925,20 @@
         "additionalProperties": false
       },
       "Rol": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RolDTO": {
         "type": "object",
         "properties": {
           "id": {
@@ -931,6 +1015,65 @@
             "items": {
               "$ref": "#/components/schemas/VacanteUsuario"
             },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UsuarioDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "correo": {
+            "type": "string",
+            "nullable": true
+          },
+          "contraseña": {
+            "type": "string",
+            "nullable": true
+          },
+          "idRol": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombreRol": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombreEmpresa": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipoEmpresa": {
+            "type": "string",
+            "nullable": true
+          },
+          "direccion": {
+            "type": "string",
+            "nullable": true
+          },
+          "telefono": {
+            "type": "string",
+            "nullable": true
+          },
+          "sitioWeb": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcionEmpresa": {
+            "type": "string",
+            "nullable": true
+          },
+          "idCV": {
+            "type": "integer",
+            "format": "int32",
             "nullable": true
           }
         },

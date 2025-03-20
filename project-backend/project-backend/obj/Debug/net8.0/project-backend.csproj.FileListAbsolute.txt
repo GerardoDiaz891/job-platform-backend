@@ -870,3 +870,5 @@ C:\Users\vampy\OneDrive\Desktop\job-platform-backend\project-backend\project-bac
 C:\Users\vampy\OneDrive\Desktop\job-platform-backend\project-backend\project-backend\obj\Debug\net8.0\project-backend.pdb
 C:\Users\vampy\OneDrive\Desktop\job-platform-backend\project-backend\project-backend\obj\Debug\net8.0\project-backend.genruntimeconfig.cache
 C:\Users\vampy\OneDrive\Desktop\job-platform-backend\project-backend\project-backend\obj\Debug\net8.0\ref\project-backend.dll
+C:\Users\vampy\OneDrive\Desktop\job-platform-backend\project-backend\project-backend\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\vampy\OneDrive\Desktop\job-platform-backend\project-backend\project-backend\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "PEzyge1jpXVWKV6rXTfOxq3scy8ZPIWoAv8Eua7ApLI=",
+  "Hash": "wKNGz6hKlP66ef/JB+lIUoLM5qSFRpLf9ax/SaDWrck=",
   "Source": "project-backend",
   "BasePath": "_content/project-backend",
   "Mode": "Default",
@@ -78,6 +78,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\cvs\\74f234f0-73bf-4ca9-a4e8-30750b0290c6.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\d3ab38ee-c699-4428-905b-c873b9b380bd.pdf",
+      "SourceId": "project-backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\",
+      "BasePath": "_content/project-backend",
+      "RelativePath": "uploads/cvs/d3ab38ee-c699-4428-905b-c873b9b380bd#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "lwdrlkg4vz",
+      "Integrity": "23uY49SnRdyjG5S5yW1un1Vr5G/dMmsoBCOVufJt8RY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\cvs\\d3ab38ee-c699-4428-905b-c873b9b380bd.pdf"
     }
   ],
   "Endpoints": [
@@ -314,6 +335,88 @@
         {
           "Name": "Last-Modified",
           "Value": "Mon, 17 Mar 2025 20:53:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-23uY49SnRdyjG5S5yW1un1Vr5G/dMmsoBCOVufJt8RY="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/cvs/d3ab38ee-c699-4428-905b-c873b9b380bd.lwdrlkg4vz.pdf",
+      "AssetFile": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\d3ab38ee-c699-4428-905b-c873b9b380bd.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "181500"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"23uY49SnRdyjG5S5yW1un1Vr5G/dMmsoBCOVufJt8RY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 20 Mar 2025 01:55:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lwdrlkg4vz"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/cvs/d3ab38ee-c699-4428-905b-c873b9b380bd.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-23uY49SnRdyjG5S5yW1un1Vr5G/dMmsoBCOVufJt8RY="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/cvs/d3ab38ee-c699-4428-905b-c873b9b380bd.pdf",
+      "AssetFile": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\d3ab38ee-c699-4428-905b-c873b9b380bd.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "181500"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"23uY49SnRdyjG5S5yW1un1Vr5G/dMmsoBCOVufJt8RY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 20 Mar 2025 01:55:09 GMT"
         },
         {
           "Name": "Cache-Control",
