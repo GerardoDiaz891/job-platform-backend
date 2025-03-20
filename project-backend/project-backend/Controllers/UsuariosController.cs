@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using project_backend.Data;
 using project_backend.Models;
 using project_backend.DTOs;
+using Microsoft.AspNetCore.Authorization;
 
 namespace project_backend.Controllers
 {
@@ -23,6 +24,7 @@ namespace project_backend.Controllers
         }
 
         // GET: api/Usuarios
+        [Authorize(Roles = "Administrador")]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<UsuarioDTO>>> GetUsuarios()
         {
@@ -50,6 +52,7 @@ namespace project_backend.Controllers
         }
 
         // GET: api/Usuarios/5
+        [Authorize(Roles = "Administrador")]
         [HttpGet("{id}")]
         public async Task<ActionResult<UsuarioDTO>> GetUsuario(int id)
         {
@@ -82,6 +85,7 @@ namespace project_backend.Controllers
         }
 
         // PUT: api/Usuarios/5
+        [Authorize(Roles = "Administrador")]
         [HttpPut("{id}")]
         public async Task<IActionResult> PutUsuario(int id, UsuarioDTO usuarioDTO)
         {
@@ -128,6 +132,7 @@ namespace project_backend.Controllers
         }
 
         // POST: api/Usuarios
+        [Authorize(Roles = "Administrador")]
         [HttpPost]
         public async Task<ActionResult<UsuarioDTO>> PostUsuario(UsuarioDTO usuarioDTO)
         {
@@ -185,6 +190,7 @@ namespace project_backend.Controllers
         }
 
         // DELETE: api/Usuarios/5
+        [Authorize(Roles = "Administrador")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUsuario(int id)
         {

@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using project_backend.Data;
 using project_backend.Models;
 using project_backend.DTOs;
+using Microsoft.AspNetCore.Authorization;
 
 namespace project_backend.Controllers
 {
@@ -27,6 +28,7 @@ namespace project_backend.Controllers
         }
 
         // GET: api/CVs
+        [Authorize(Roles = "Empresarial, Postulante")]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<CVDTO>>> GetCVs()
         {
@@ -43,6 +45,7 @@ namespace project_backend.Controllers
         }
 
         // GET: api/CVs/5
+        [Authorize(Roles = "Empresarial, Postulante")]
         [HttpGet("{id}")]
         public async Task<ActionResult<CVDTO>> GetCV(int id)
         {
@@ -65,6 +68,7 @@ namespace project_backend.Controllers
         }
 
         // PUT: api/CVs/5
+        [Authorize(Roles = "Postulante")]
         [HttpPut("{id}")]
         public async Task<IActionResult> PutCV(int id, CVDTO cvDTO)
         {
@@ -103,6 +107,7 @@ namespace project_backend.Controllers
         }
 
         // Método para subir un archivo PDF
+        [Authorize(Roles = "Postulante")]
         [HttpPost("upload")]
         public async Task<ActionResult<CVDTO>> UploadCV(IFormFile file, int usuarioId)
         {
@@ -171,6 +176,7 @@ namespace project_backend.Controllers
         }
 
         // Método para descargar un archivo PDF
+        [Authorize]
         [HttpGet("download/{id}")]
         public async Task<IActionResult> DownloadCV(int id)
         {
@@ -193,6 +199,7 @@ namespace project_backend.Controllers
         }
 
         // DELETE: api/CVs/5
+        [Authorize(Roles = "Postulante")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCV(int id)
         {

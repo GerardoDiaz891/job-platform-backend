@@ -4,6 +4,7 @@ using Microsoft.IdentityModel.Tokens;
 using project_backend.Data;
 using project_backend.Services;
 using System.Text;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -40,12 +41,44 @@ builder.Services.AddCors(options =>
 });
 
 
-builder.Services.AddAuthorization();
-
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("AdminOnly", policy => policy.RequireRole("Administrador"));
+    options.AddPolicy("EmpresarialOnly", policy => policy.RequireRole("Empresarial"));
+    options.AddPolicy("PostulanteOnly", policy => policy.RequireRole("Postulante"));
+});
 // Configurar Swagger
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+
+    // Configuración para admitir JWT en Swagger
+    var securityScheme = new OpenApiSecurityScheme
+    {
+        Name = "Authorization",
+        Description = "Enter JWT Bearer token",
+        In = ParameterLocation.Header,
+        Type = SecuritySchemeType.Http,
+        Scheme = "bearer",
+        BearerFormat = "JWT",
+        Reference = new OpenApiReference
+        {
+            Type = ReferenceType.SecurityScheme,
+            Id = "Bearer"
+        }
+    };
+
+    c.AddSecurityDefinition("Bearer", securityScheme);
+
+    var securityRequirement = new OpenApiSecurityRequirement
+    {
+        { securityScheme, new[] { "Bearer" } }
+    };
+
+    c.AddSecurityRequirement(securityRequirement);
+});
 builder.Services.AddScoped<TokenService>();
 
 var app = builder.Build();

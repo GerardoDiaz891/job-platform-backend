@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -23,6 +24,7 @@ namespace project_backend.Controllers
         }
 
         // GET: api/Vacantes
+        [Authorize(Roles = "Empresarial")]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Vacante>>> GetVacantes()
         {
@@ -30,6 +32,7 @@ namespace project_backend.Controllers
         }
 
         // GET: api/Vacantes/5
+        [Authorize(Roles = "Empresarial")]
         [HttpGet("{id}")]
         public async Task<ActionResult<Vacante>> GetVacante(int id)
         {
@@ -45,6 +48,7 @@ namespace project_backend.Controllers
 
         // PUT: api/Vacantes/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [Authorize(Roles = "Empresarial")]
         [HttpPut("{id}")]
         public async Task<IActionResult> PutVacante(int id, Vacante vacante)
         {
@@ -76,6 +80,7 @@ namespace project_backend.Controllers
 
         // POST: api/Vacantes
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [Authorize(Roles = "Empresarial")]
         [HttpPost]
         public async Task<ActionResult<Vacante>> PostVacante(VacantesDTO vacantedto)
         {   
@@ -109,6 +114,7 @@ namespace project_backend.Controllers
         }
 
         // DELETE: api/Vacantes/5
+        [Authorize(Roles = "Empresarial")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteVacante(int id)
         {

@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using project_backend.Data;
 using project_backend.Models;
 using project_backend.DTOs;
+using Microsoft.AspNetCore.Authorization;
 
 namespace project_backend.Controllers
 {
@@ -23,6 +24,7 @@ namespace project_backend.Controllers
         }
 
         // GET: api/Rols
+        [Authorize(Roles = "Administrador")]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<RolDTO>>> GetRoles()
         {
@@ -37,6 +39,7 @@ namespace project_backend.Controllers
         }
 
         // GET: api/Rols/5
+        [Authorize(Roles = "Administrador")]
         [HttpGet("{id}")]
         public async Task<ActionResult<RolDTO>> GetRol(int id)
         {
@@ -93,6 +96,7 @@ namespace project_backend.Controllers
         }
 
         // POST: api/Rols
+        [Authorize(Roles = "Administrador")]
         [HttpPost]
         public async Task<ActionResult<RolDTO>> PostRol(RolDTO rolDTO)
         {
@@ -114,6 +118,7 @@ namespace project_backend.Controllers
         }
 
         // DELETE: api/Rols/5
+        [Authorize(Roles = "Administrador")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteRol(int id)
         {
