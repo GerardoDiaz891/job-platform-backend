@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wKNGz6hKlP66ef/JB+lIUoLM5qSFRpLf9ax/SaDWrck=",
+  "Hash": "bMjvHTdbDac7TC3XfJbiFolF2SG0AfAqEOlm/L+xFzY=",
   "Source": "project-backend",
   "BasePath": "_content/project-backend",
   "Mode": "Default",
@@ -16,6 +16,27 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\121d0c5d-13b5-4a4b-bd53-f43ba884ea3f.pdf",
+      "SourceId": "project-backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\",
+      "BasePath": "_content/project-backend",
+      "RelativePath": "uploads/cvs/121d0c5d-13b5-4a4b-bd53-f43ba884ea3f#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "lwdrlkg4vz",
+      "Integrity": "23uY49SnRdyjG5S5yW1un1Vr5G/dMmsoBCOVufJt8RY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\cvs\\121d0c5d-13b5-4a4b-bd53-f43ba884ea3f.pdf"
+    },
     {
       "Identity": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\1c12be10-0f98-414a-9a42-a9f045aef707.pdf",
       "SourceId": "project-backend",
@@ -102,6 +123,88 @@
     }
   ],
   "Endpoints": [
+    {
+      "Route": "uploads/cvs/121d0c5d-13b5-4a4b-bd53-f43ba884ea3f.lwdrlkg4vz.pdf",
+      "AssetFile": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\121d0c5d-13b5-4a4b-bd53-f43ba884ea3f.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "181500"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"23uY49SnRdyjG5S5yW1un1Vr5G/dMmsoBCOVufJt8RY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 20 Mar 2025 04:51:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lwdrlkg4vz"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/cvs/121d0c5d-13b5-4a4b-bd53-f43ba884ea3f.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-23uY49SnRdyjG5S5yW1un1Vr5G/dMmsoBCOVufJt8RY="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/cvs/121d0c5d-13b5-4a4b-bd53-f43ba884ea3f.pdf",
+      "AssetFile": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\121d0c5d-13b5-4a4b-bd53-f43ba884ea3f.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "181500"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"23uY49SnRdyjG5S5yW1un1Vr5G/dMmsoBCOVufJt8RY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 20 Mar 2025 04:51:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-23uY49SnRdyjG5S5yW1un1Vr5G/dMmsoBCOVufJt8RY="
+        }
+      ]
+    },
     {
       "Route": "uploads/cvs/1c12be10-0f98-414a-9a42-a9f045aef707.jte6vzy3ke.pdf",
       "AssetFile": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\1c12be10-0f98-414a-9a42-a9f045aef707.pdf",
@@ -371,7 +474,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 01:55:09 GMT"
+          "Value": "Thu, 20 Mar 2025 04:51:45 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -416,7 +519,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 01:55:09 GMT"
+          "Value": "Thu, 20 Mar 2025 04:51:45 GMT"
         },
         {
           "Name": "Cache-Control",

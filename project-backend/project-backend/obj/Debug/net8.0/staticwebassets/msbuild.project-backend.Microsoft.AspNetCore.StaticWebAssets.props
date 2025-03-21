@@ -1,5 +1,23 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\cvs\121d0c5d-13b5-4a4b-bd53-f43ba884ea3f.pdf'))">
+      <SourceType>Package</SourceType>
+      <SourceId>project-backend</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/project-backend</BasePath>
+      <RelativePath>uploads/cvs/121d0c5d-13b5-4a4b-bd53-f43ba884ea3f.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lwdrlkg4vz</Fingerprint>
+      <Integrity>23uY49SnRdyjG5S5yW1un1Vr5G/dMmsoBCOVufJt8RY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\cvs\121d0c5d-13b5-4a4b-bd53-f43ba884ea3f.pdf'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\cvs\1c12be10-0f98-414a-9a42-a9f045aef707.pdf'))">
       <SourceType>Package</SourceType>
       <SourceId>project-backend</SourceId>

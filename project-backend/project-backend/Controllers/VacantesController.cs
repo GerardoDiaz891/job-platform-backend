@@ -24,7 +24,7 @@ namespace project_backend.Controllers
         }
 
         // GET: api/Vacantes
-        [Authorize(Roles = "Empresarial")]
+        //[Authorize(Roles = "Empresarial")]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Vacante>>> GetVacantes()
         {
