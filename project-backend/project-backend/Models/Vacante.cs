@@ -16,6 +16,8 @@ namespace project_backend.Models
         public string TipoTrabajo { get; set; } // "Remoto", "Presencial", "Híbrido"
 
         public virtual ICollection<VacanteUsuario> VacanteUsuarios { get; set; } = new List<VacanteUsuario>();
+        
+        public virtual ICollection<CV> CV { get; set; } = new List<CV>();
 
     }
 }

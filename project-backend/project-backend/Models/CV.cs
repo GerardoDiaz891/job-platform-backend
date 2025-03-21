@@ -11,5 +11,9 @@ namespace project_backend.Models
         [ForeignKey(nameof(Usuario))]
         public int IdUsuario { get; set; } // FK al Usuari
         public virtual Usuario Usuario { get; set; } // Relación uno a uno con Usuario
+        
+        [ForeignKey(nameof(Vacante))]
+        public int IdVacante { get; set; } 
+        public virtual Vacante Vacante { get; set; } 
     }
 }

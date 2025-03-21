@@ -1,43 +1,39 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\121d0c5d-13b5-4a4b-bd53-f43ba884ea3f.pdf",
-      "PackagePath": "staticwebassets\\uploads\\cvs\\121d0c5d-13b5-4a4b-bd53-f43ba884ea3f.pdf"
+      "Id": "/Users/Rdia23/Desktop/BackF/job-platform-backend/project-backend/project-backend/wwwroot/uploads/cvs/121d0c5d-13b5-4a4b-bd53-f43ba884ea3f.pdf",
+      "PackagePath": "staticwebassets/uploads/cvs/121d0c5d-13b5-4a4b-bd53-f43ba884ea3f.pdf"
     },
     {
-      "Id": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\1c12be10-0f98-414a-9a42-a9f045aef707.pdf",
-      "PackagePath": "staticwebassets\\uploads\\cvs\\1c12be10-0f98-414a-9a42-a9f045aef707.pdf"
+      "Id": "/Users/Rdia23/Desktop/BackF/job-platform-backend/project-backend/project-backend/wwwroot/uploads/cvs/1c12be10-0f98-414a-9a42-a9f045aef707.pdf",
+      "PackagePath": "staticwebassets/uploads/cvs/1c12be10-0f98-414a-9a42-a9f045aef707.pdf"
     },
     {
-      "Id": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\58b6bbae-b69e-4db7-8197-56610684bedb.pdf",
-      "PackagePath": "staticwebassets\\uploads\\cvs\\58b6bbae-b69e-4db7-8197-56610684bedb.pdf"
+      "Id": "/Users/Rdia23/Desktop/BackF/job-platform-backend/project-backend/project-backend/wwwroot/uploads/cvs/58b6bbae-b69e-4db7-8197-56610684bedb.pdf",
+      "PackagePath": "staticwebassets/uploads/cvs/58b6bbae-b69e-4db7-8197-56610684bedb.pdf"
     },
     {
-      "Id": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\74f234f0-73bf-4ca9-a4e8-30750b0290c6.pdf",
-      "PackagePath": "staticwebassets\\uploads\\cvs\\74f234f0-73bf-4ca9-a4e8-30750b0290c6.pdf"
+      "Id": "/Users/Rdia23/Desktop/BackF/job-platform-backend/project-backend/project-backend/wwwroot/uploads/cvs/74f234f0-73bf-4ca9-a4e8-30750b0290c6.pdf",
+      "PackagePath": "staticwebassets/uploads/cvs/74f234f0-73bf-4ca9-a4e8-30750b0290c6.pdf"
     },
     {
-      "Id": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\d3ab38ee-c699-4428-905b-c873b9b380bd.pdf",
-      "PackagePath": "staticwebassets\\uploads\\cvs\\d3ab38ee-c699-4428-905b-c873b9b380bd.pdf"
+      "Id": "/Users/Rdia23/Desktop/BackF/job-platform-backend/project-backend/project-backend/wwwroot/uploads/cvs/d3ab38ee-c699-4428-905b-c873b9b380bd.pdf",
+      "PackagePath": "staticwebassets/uploads/cvs/d3ab38ee-c699-4428-905b-c873b9b380bd.pdf"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.project-backend.props",
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.project-backend.props",
       "PackagePath": "build\\project-backend.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.project-backend.props",
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.project-backend.props",
       "PackagePath": "buildMultiTargeting\\project-backend.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.project-backend.props",
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.project-backend.props",
       "PackagePath": "buildTransitive\\project-backend.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.project-backend.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
-      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
-    },
-    {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.project-backend.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.project-backend.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     }
   ],
