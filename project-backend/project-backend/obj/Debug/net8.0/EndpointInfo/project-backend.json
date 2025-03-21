@@ -236,6 +236,14 @@
               "type": "integer",
               "format": "int32"
             }
+          },
+          {
+            "name": "idVacante",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
           }
         ],
         "requestBody": {
@@ -884,6 +892,13 @@
           },
           "usuario": {
             "$ref": "#/components/schemas/Usuario"
+          },
+          "idVacante": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "vacante": {
+            "$ref": "#/components/schemas/Vacante"
           }
         },
         "additionalProperties": false
@@ -904,6 +919,10 @@
             "format": "date-time"
           },
           "idUsuario": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idVacante": {
             "type": "integer",
             "format": "int32"
           }
@@ -1126,6 +1145,13 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/VacanteUsuario"
+            },
+            "nullable": true
+          },
+          "cVs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CV"
             },
             "nullable": true
           }

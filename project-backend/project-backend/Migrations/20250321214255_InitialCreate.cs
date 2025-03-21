@@ -82,7 +82,8 @@ namespace project_backend.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     RutaArchivo = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     FechaSubida = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    IdUsuario = table.Column<int>(type: "int", nullable: false)
+                    IdUsuario = table.Column<int>(type: "int", nullable: false),
+                    IdVacante = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -91,6 +92,12 @@ namespace project_backend.Migrations
                         name: "FK_CVs_Usuarios_IdUsuario",
                         column: x => x.IdUsuario,
                         principalTable: "Usuarios",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_CVs_Vacantes_IdVacante",
+                        column: x => x.IdVacante,
+                        principalTable: "Vacantes",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -126,6 +133,11 @@ namespace project_backend.Migrations
                 table: "CVs",
                 column: "IdUsuario",
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_CVs_IdVacante",
+                table: "CVs",
+                column: "IdVacante");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Roles_Nombre",

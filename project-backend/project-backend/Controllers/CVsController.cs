@@ -109,7 +109,7 @@ namespace project_backend.Controllers
         // Método para subir un archivo PDF
         [Authorize(Roles = "Postulante")]
         [HttpPost("upload")]
-        public async Task<ActionResult<CVDTO>> UploadCV(IFormFile file, int usuarioId)
+        public async Task<ActionResult<CVDTO>> UploadCV(IFormFile file, int usuarioId, int idVacante)
         {
             if (file == null || file.Length == 0)
             {
@@ -127,6 +127,13 @@ namespace project_backend.Controllers
             if (usuario == null)
             {
                 return BadRequest("El usuario especificado no existe.");
+            }
+
+            // Verificar que la vacante exista
+            var vacante = await _context.Vacantes.FindAsync(idVacante);
+            if (vacante == null)
+            {
+                return BadRequest("La vacante especificada no existe.");
             }
 
             // Verificar que _env.WebRootPath no sea null
@@ -157,7 +164,8 @@ namespace project_backend.Controllers
             {
                 RutaArchivo = fileName, // Guardar solo el nombre del archivo
                 FechaSubida = DateTime.UtcNow,
-                IdUsuario = usuarioId
+                IdUsuario = usuarioId,
+                IdVacante = idVacante // Asociar el CV a la vacante
             };
 
             _context.CVs.Add(cv);
@@ -169,7 +177,8 @@ namespace project_backend.Controllers
                 Id = cv.Id,
                 RutaArchivo = cv.RutaArchivo,
                 FechaSubida = cv.FechaSubida,
-                IdUsuario = cv.IdUsuario
+                IdUsuario = cv.IdUsuario,
+                IdVacante = cv.IdVacante
             };
 
             return Ok(cvDTO);

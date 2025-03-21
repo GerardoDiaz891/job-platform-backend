@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3550191F-4A5A-4C7F-BDD6-222533763E43}|project-backend\\project-backend.csproj|c:\\users\\vampy\\onedrive\\desktop\\job-platform-backend\\project-backend\\project-backend\\controllers\\vacantescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3550191F-4A5A-4C7F-BDD6-222533763E43}|project-backend\\project-backend.csproj|solutionrelative:project-backend\\controllers\\vacantescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3550191F-4A5A-4C7F-BDD6-222533763E43}|project-backend\\project-backend.csproj|c:\\users\\vampy\\onedrive\\desktop\\job-platform-backend\\project-backend\\project-backend\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3550191F-4A5A-4C7F-BDD6-222533763E43}|project-backend\\project-backend.csproj|solutionrelative:project-backend\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3550191F-4A5A-4C7F-BDD6-222533763E43}|project-backend\\project-backend.csproj|c:\\users\\vampy\\onedrive\\desktop\\job-platform-backend\\project-backend\\project-backend\\controllers\\cvscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3550191F-4A5A-4C7F-BDD6-222533763E43}|project-backend\\project-backend.csproj|solutionrelative:project-backend\\controllers\\cvscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,31 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UsuariosController.cs",
-              "DocumentMoniker": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\Controllers\\UsuariosController.cs",
-              "RelativeDocumentMoniker": "project-backend\\Controllers\\UsuariosController.cs",
-              "ToolTip": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\Controllers\\UsuariosController.cs",
-              "RelativeToolTip": "project-backend\\Controllers\\UsuariosController.cs",
-              "ViewState": "AgIAAG0AAAAAAAAAAAAkwIEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T00:49:25.938Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "VacantesController.cs",
-              "DocumentMoniker": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\Controllers\\VacantesController.cs",
-              "RelativeDocumentMoniker": "project-backend\\Controllers\\VacantesController.cs",
-              "ToolTip": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\Controllers\\VacantesController.cs",
-              "RelativeToolTip": "project-backend\\Controllers\\VacantesController.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAQwBsAAAARAAAAAAAAAA==",
+              "Title": "CVsController.cs",
+              "DocumentMoniker": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\Controllers\\CVsController.cs",
+              "RelativeDocumentMoniker": "project-backend\\Controllers\\CVsController.cs",
+              "ToolTip": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\Controllers\\CVsController.cs",
+              "RelativeToolTip": "project-backend\\Controllers\\CVsController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T00:33:05.399Z",
+              "WhenOpened": "2025-03-21T21:57:14.06Z",
               "EditorCaption": ""
             }
           ]

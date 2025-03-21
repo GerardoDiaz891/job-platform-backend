@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace project_backend.Models
 {
@@ -17,5 +18,7 @@ namespace project_backend.Models
 
         public virtual ICollection<VacanteUsuario> VacanteUsuarios { get; set; } = new List<VacanteUsuario>();
 
+        // Agregar esta propiedad para la relación con CV
+        public virtual ICollection<CV> CVs { get; set; } = new List<CV>();
     }
 }

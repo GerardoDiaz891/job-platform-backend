@@ -36,6 +36,9 @@ namespace project_backend.Migrations
                     b.Property<int>("IdUsuario")
                         .HasColumnType("int");
 
+                    b.Property<int>("IdVacante")
+                        .HasColumnType("int");
+
                     b.Property<string>("RutaArchivo")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -44,6 +47,8 @@ namespace project_backend.Migrations
 
                     b.HasIndex("IdUsuario")
                         .IsUnique();
+
+                    b.HasIndex("IdVacante");
 
                     b.ToTable("CVs");
                 });
@@ -199,7 +204,15 @@ namespace project_backend.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("project_backend.Models.Vacante", "Vacante")
+                        .WithMany("CVs")
+                        .HasForeignKey("IdVacante")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Usuario");
+
+                    b.Navigation("Vacante");
                 });
 
             modelBuilder.Entity("project_backend.Models.Usuario", b =>
@@ -241,6 +254,8 @@ namespace project_backend.Migrations
 
             modelBuilder.Entity("project_backend.Models.Vacante", b =>
                 {
+                    b.Navigation("CVs");
+
                     b.Navigation("VacanteUsuarios");
                 });
 #pragma warning restore 612, 618

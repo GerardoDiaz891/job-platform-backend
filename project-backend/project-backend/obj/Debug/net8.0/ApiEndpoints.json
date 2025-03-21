@@ -157,6 +157,11 @@
         "Name": "usuarioId",
         "Type": "System.Int32",
         "IsRequired": false
+      },
+      {
+        "Name": "idVacante",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
