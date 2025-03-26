@@ -251,5 +251,55 @@ namespace project_backend.Controllers
 
             return Ok(usuarioDTO);
         }
+
+
+        // PUT: api/Usuarios/mi-informacion
+        [Authorize]
+        [HttpPut("mi-informacion")]
+        public async Task<IActionResult> PutMiInformacion(UsuarioUpdateDTO usuarioUpdateDTO)
+        {
+            var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
+            if (userIdClaim == null || !int.TryParse(userIdClaim.Value, out int userId))
+            {
+                return Unauthorized();
+            }
+
+            var usuario = await _context.Usuarios.FindAsync(userId);
+            if (usuario == null)
+            {
+                return NotFound();
+            }
+
+            usuario.Nombre = usuarioUpdateDTO.Nombre;
+            usuario.NombreEmpresa = usuarioUpdateDTO.NombreEmpresa;
+            usuario.TipoEmpresa = usuarioUpdateDTO.TipoEmpresa;
+            usuario.Direccion = usuarioUpdateDTO.Direccion;
+            usuario.Telefono = usuarioUpdateDTO.Telefono;
+            usuario.SitioWeb = usuarioUpdateDTO.SitioWeb;
+            usuario.DescripcionEmpresa = usuarioUpdateDTO.DescripcionEmpresa;
+
+            if (!string.IsNullOrEmpty(usuarioUpdateDTO.Contraseña))
+            {
+                usuario.SetPassword(usuarioUpdateDTO.Contraseña);
+            }
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!UsuarioExists(userId))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
+        }
     }
 }

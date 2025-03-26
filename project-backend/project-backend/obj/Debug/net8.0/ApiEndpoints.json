@@ -415,6 +415,22 @@
     ]
   },
   {
+    "ContainingType": "project_backend.Controllers.UsuariosController",
+    "Method": "PutMiInformacion",
+    "RelativePath": "api/Usuarios/mi-informacion",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuarioUpdateDTO",
+        "Type": "project_backend.DTOs.UsuarioUpdateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "project_backend.Controllers.VacantesController",
     "Method": "GetVacantes",
     "RelativePath": "api/Vacantes",
