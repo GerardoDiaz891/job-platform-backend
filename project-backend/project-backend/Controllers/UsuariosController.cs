@@ -9,6 +9,7 @@ using project_backend.Data;
 using project_backend.Models;
 using project_backend.DTOs;
 using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 namespace project_backend.Controllers
 {
@@ -209,6 +210,46 @@ namespace project_backend.Controllers
         private bool UsuarioExists(int id)
         {
             return _context.Usuarios.Any(e => e.Id == id);
+        }
+
+
+        // GET: api/Usuarios/mi-informacion
+        [Authorize]
+        [HttpGet("mi-informacion")]
+        public async Task<ActionResult<UsuarioDTO>> GetMiInformacion()
+        {
+            var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
+            if (userIdClaim == null || !int.TryParse(userIdClaim.Value, out int userId))
+            {
+                return Unauthorized();
+            }
+
+            var usuario = await _context.Usuarios
+                .Include(u => u.Rol)
+                .FirstOrDefaultAsync(u => u.Id == userId);
+
+            if (usuario == null)
+            {
+                return NotFound();
+            }
+
+            var usuarioDTO = new UsuarioDTO
+            {
+                Id = usuario.Id,
+                Nombre = usuario.Nombre,
+                Correo = usuario.Correo,
+                IdRol = usuario.IdRol,
+                NombreRol = usuario.Rol?.Nombre,
+                NombreEmpresa = usuario.NombreEmpresa,
+                TipoEmpresa = usuario.TipoEmpresa,
+                Direccion = usuario.Direccion,
+                Telefono = usuario.Telefono,
+                SitioWeb = usuario.SitioWeb,
+                DescripcionEmpresa = usuario.DescripcionEmpresa,
+                IdCV = usuario.IdCV
+            };
+
+            return Ok(usuarioDTO);
         }
     }
 }

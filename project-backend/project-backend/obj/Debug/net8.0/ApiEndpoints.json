@@ -395,6 +395,26 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "project_backend.Controllers.UsuariosController",
+    "Method": "GetMiInformacion",
+    "RelativePath": "api/Usuarios/mi-informacion",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "project_backend.DTOs.UsuarioDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "project_backend.Controllers.VacantesController",
     "Method": "GetVacantes",
     "RelativePath": "api/Vacantes",

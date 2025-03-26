@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "bMjvHTdbDac7TC3XfJbiFolF2SG0AfAqEOlm/L+xFzY=",
+  "Hash": "kNjusFw77SOt4VbndDNpNbmcLW4I9JJmGprVgxRfNf0=",
   "Source": "project-backend",
   "BasePath": "_content/project-backend",
   "Mode": "Default",
@@ -78,6 +78,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\cvs\\58b6bbae-b69e-4db7-8197-56610684bedb.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\64ffd0b3-2e33-4d08-9aa2-1b2ef5dd0312.pdf",
+      "SourceId": "project-backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\",
+      "BasePath": "_content/project-backend",
+      "RelativePath": "uploads/cvs/64ffd0b3-2e33-4d08-9aa2-1b2ef5dd0312#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "lwdrlkg4vz",
+      "Integrity": "23uY49SnRdyjG5S5yW1un1Vr5G/dMmsoBCOVufJt8RY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\cvs\\64ffd0b3-2e33-4d08-9aa2-1b2ef5dd0312.pdf"
     },
     {
       "Identity": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\74f234f0-73bf-4ca9-a4e8-30750b0290c6.pdf",
@@ -366,6 +387,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-h1v68elXz1xvPCLUXDayRjA83GRWJmCj27ZJhXVG8Is="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/cvs/64ffd0b3-2e33-4d08-9aa2-1b2ef5dd0312.lwdrlkg4vz.pdf",
+      "AssetFile": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\64ffd0b3-2e33-4d08-9aa2-1b2ef5dd0312.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "181500"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"23uY49SnRdyjG5S5yW1un1Vr5G/dMmsoBCOVufJt8RY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Mar 2025 23:27:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lwdrlkg4vz"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/cvs/64ffd0b3-2e33-4d08-9aa2-1b2ef5dd0312.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-23uY49SnRdyjG5S5yW1un1Vr5G/dMmsoBCOVufJt8RY="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/cvs/64ffd0b3-2e33-4d08-9aa2-1b2ef5dd0312.pdf",
+      "AssetFile": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\64ffd0b3-2e33-4d08-9aa2-1b2ef5dd0312.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "181500"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"23uY49SnRdyjG5S5yW1un1Vr5G/dMmsoBCOVufJt8RY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Mar 2025 23:27:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-23uY49SnRdyjG5S5yW1un1Vr5G/dMmsoBCOVufJt8RY="
         }
       ]
     },

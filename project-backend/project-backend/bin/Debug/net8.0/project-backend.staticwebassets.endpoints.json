@@ -249,6 +249,88 @@
       ]
     },
     {
+      "Route": "uploads/cvs/64ffd0b3-2e33-4d08-9aa2-1b2ef5dd0312.lwdrlkg4vz.pdf",
+      "AssetFile": "uploads/cvs/64ffd0b3-2e33-4d08-9aa2-1b2ef5dd0312.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "181500"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"23uY49SnRdyjG5S5yW1un1Vr5G/dMmsoBCOVufJt8RY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Mar 2025 23:27:52 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lwdrlkg4vz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-23uY49SnRdyjG5S5yW1un1Vr5G/dMmsoBCOVufJt8RY="
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/cvs/64ffd0b3-2e33-4d08-9aa2-1b2ef5dd0312.pdf"
+        }
+      ]
+    },
+    {
+      "Route": "uploads/cvs/64ffd0b3-2e33-4d08-9aa2-1b2ef5dd0312.pdf",
+      "AssetFile": "uploads/cvs/64ffd0b3-2e33-4d08-9aa2-1b2ef5dd0312.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "181500"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"23uY49SnRdyjG5S5yW1un1Vr5G/dMmsoBCOVufJt8RY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Mar 2025 23:27:52 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-23uY49SnRdyjG5S5yW1un1Vr5G/dMmsoBCOVufJt8RY="
+        }
+      ]
+    },
+    {
       "Route": "uploads/cvs/74f234f0-73bf-4ca9-a4e8-30750b0290c6.lwdrlkg4vz.pdf",
       "AssetFile": "uploads/cvs/74f234f0-73bf-4ca9-a4e8-30750b0290c6.pdf",
       "Selectors": [],
