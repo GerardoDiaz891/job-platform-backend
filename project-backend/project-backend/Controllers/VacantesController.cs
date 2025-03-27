@@ -26,24 +26,73 @@ namespace project_backend.Controllers
         // GET: api/Vacantes
         //[Authorize(Roles = "Empresarial")]
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Vacante>>> GetVacantes()
+        public async Task<ActionResult<IEnumerable<VacantesDTO>>> GetVacantes()
         {
-            return await _context.Vacantes.ToListAsync();
+            var vacantes = await _context.Vacantes
+                .Include(v => v.CVs) // Incluir los CVs relacionados
+                .ToListAsync();
+
+            var vacantesDTO = vacantes.Select(v => new VacantesDTO
+            {
+                Id = v.Id,
+                Nombre = v.Nombre,
+                Descripcion = v.Descripcion,
+                Salario = v.Salario,
+                Horario = v.Horario,
+                FechaPublicacion = v.FechaPublicacion,
+                FechaExpiracion = v.FechaExpiracion,
+                HabilidadesRequeridas = v.HabilidadesRequeridas,
+                Ubicacion = v.Ubicacion,
+                TipoTrabajo = v.TipoTrabajo,
+                CVs = v.CVs.Select(cv => new CVDTO
+                {
+                    Id = cv.Id,
+                    RutaArchivo = cv.RutaArchivo,
+                    FechaSubida = cv.FechaSubida,
+                    IdUsuario = cv.IdUsuario,
+                    IdVacante = cv.IdVacante
+                }).ToList()
+            }).ToList();
+
+            return Ok(vacantesDTO);
         }
 
         // GET: api/Vacantes/5
-        [Authorize(Roles = "Empresarial")]
         [HttpGet("{id}")]
-        public async Task<ActionResult<Vacante>> GetVacante(int id)
+        public async Task<ActionResult<VacantesDTO>> GetVacante(int id)
         {
-            var vacante = await _context.Vacantes.FindAsync(id);
+            var vacante = await _context.Vacantes
+                .Include(v => v.CVs)
+                .FirstOrDefaultAsync(v => v.Id == id);
 
             if (vacante == null)
             {
                 return NotFound();
             }
 
-            return vacante;
+            var vacanteDTO = new VacantesDTO
+            {
+                Id = vacante.Id,
+                Nombre = vacante.Nombre,
+                Descripcion = vacante.Descripcion,
+                Salario = vacante.Salario,
+                Horario = vacante.Horario,
+                FechaPublicacion = vacante.FechaPublicacion,
+                FechaExpiracion = vacante.FechaExpiracion,
+                HabilidadesRequeridas = vacante.HabilidadesRequeridas,
+                Ubicacion = vacante.Ubicacion,
+                TipoTrabajo = vacante.TipoTrabajo,
+                CVs = vacante.CVs.Select(cv => new CVDTO
+                {
+                    Id = cv.Id,
+                    RutaArchivo = cv.RutaArchivo,
+                    FechaSubida = cv.FechaSubida,
+                    IdUsuario = cv.IdUsuario,
+                    IdVacante = cv.IdVacante
+                }).ToList()
+            };
+
+            return Ok(vacanteDTO);
         }
 
         // PUT: api/Vacantes/5

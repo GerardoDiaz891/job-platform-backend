@@ -13,4 +13,5 @@ public class VacantesDTO
     public string Ubicacion { get; set; }
     public string TipoTrabajo { get; set; } // "Remoto", "Presencial", "Híbrido"
     public int? UsuarioId { get; set; } // FK al Usuario (empresarial)
+    public List<CVDTO> CVs { get; set; } = new List<CVDTO>();
 }

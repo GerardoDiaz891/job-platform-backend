@@ -21,8 +21,16 @@
       "PackagePath": "staticwebassets\\uploads\\cvs\\74f234f0-73bf-4ca9-a4e8-30750b0290c6.pdf"
     },
     {
+      "Id": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\c802cc74-94d2-4ae2-994c-9c414412f30a.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cvs\\c802cc74-94d2-4ae2-994c-9c414412f30a.pdf"
+    },
+    {
       "Id": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\d3ab38ee-c699-4428-905b-c873b9b380bd.pdf",
       "PackagePath": "staticwebassets\\uploads\\cvs\\d3ab38ee-c699-4428-905b-c873b9b380bd.pdf"
+    },
+    {
+      "Id": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\e1b02cbf-44f0-4ff6-aa8b-648d13f3382a.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cvs\\e1b02cbf-44f0-4ff6-aa8b-648d13f3382a.pdf"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.project-backend.props",
