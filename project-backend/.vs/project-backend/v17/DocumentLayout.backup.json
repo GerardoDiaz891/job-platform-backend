@@ -7,20 +7,12 @@
       "RelativeMoniker": "D:0:0:{3550191F-4A5A-4C7F-BDD6-222533763E43}|project-backend\\project-backend.csproj|solutionrelative:project-backend\\controllers\\cvscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3550191F-4A5A-4C7F-BDD6-222533763E43}|project-backend\\project-backend.csproj|c:\\users\\vampy\\onedrive\\desktop\\job-platform-backend\\project-backend\\project-backend\\controllers\\vacantescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3550191F-4A5A-4C7F-BDD6-222533763E43}|project-backend\\project-backend.csproj|solutionrelative:project-backend\\controllers\\vacantescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3550191F-4A5A-4C7F-BDD6-222533763E43}|project-backend\\project-backend.csproj|c:\\users\\vampy\\onedrive\\desktop\\job-platform-backend\\project-backend\\project-backend\\dtos\\vacantesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3550191F-4A5A-4C7F-BDD6-222533763E43}|project-backend\\project-backend.csproj|solutionrelative:project-backend\\dtos\\vacantesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3550191F-4A5A-4C7F-BDD6-222533763E43}|project-backend\\project-backend.csproj|c:\\users\\vampy\\onedrive\\desktop\\job-platform-backend\\project-backend\\project-backend\\models\\vacanteusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3550191F-4A5A-4C7F-BDD6-222533763E43}|project-backend\\project-backend.csproj|solutionrelative:project-backend\\models\\vacanteusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3550191F-4A5A-4C7F-BDD6-222533763E43}|project-backend\\project-backend.csproj|c:\\users\\vampy\\onedrive\\desktop\\job-platform-backend\\project-backend\\project-backend\\dtos\\cvdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3550191F-4A5A-4C7F-BDD6-222533763E43}|project-backend\\project-backend.csproj|solutionrelative:project-backend\\dtos\\cvdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3550191F-4A5A-4C7F-BDD6-222533763E43}|project-backend\\project-backend.csproj|c:\\users\\vampy\\onedrive\\desktop\\job-platform-backend\\project-backend\\project-backend\\controllers\\vacantescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3550191F-4A5A-4C7F-BDD6-222533763E43}|project-backend\\project-backend.csproj|solutionrelative:project-backend\\controllers\\vacantescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,58 +22,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "VacanteUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\Models\\VacanteUsuario.cs",
-              "RelativeDocumentMoniker": "project-backend\\Models\\VacanteUsuario.cs",
-              "ToolTip": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\Models\\VacanteUsuario.cs",
-              "RelativeToolTip": "project-backend\\Models\\VacanteUsuario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T23:51:44.433Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "VacantesController.cs",
-              "DocumentMoniker": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\Controllers\\VacantesController.cs",
-              "RelativeDocumentMoniker": "project-backend\\Controllers\\VacantesController.cs",
-              "ToolTip": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\Controllers\\VacantesController.cs",
-              "RelativeToolTip": "project-backend\\Controllers\\VacantesController.cs",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAAwKsAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T23:54:16.833Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "VacantesDTO.cs",
               "DocumentMoniker": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\DTOs\\VacantesDTO.cs",
               "RelativeDocumentMoniker": "project-backend\\DTOs\\VacantesDTO.cs",
               "ToolTip": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\DTOs\\VacantesDTO.cs",
               "RelativeToolTip": "project-backend\\DTOs\\VacantesDTO.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAsAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAwwAsAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T23:50:56.314Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CVDTO.cs",
-              "DocumentMoniker": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\DTOs\\CVDTO.cs",
-              "RelativeDocumentMoniker": "project-backend\\DTOs\\CVDTO.cs",
-              "ToolTip": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\DTOs\\CVDTO.cs",
-              "RelativeToolTip": "project-backend\\DTOs\\CVDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T23:50:43.429Z",
+              "WhenOpened": "2025-03-28T00:25:02.274Z",
               "EditorCaption": ""
             },
             {
@@ -92,9 +45,22 @@
               "RelativeDocumentMoniker": "project-backend\\Controllers\\CVsController.cs",
               "ToolTip": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\Controllers\\CVsController.cs",
               "RelativeToolTip": "project-backend\\Controllers\\CVsController.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAvwJUAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAOwAAAAAAAAAAAAgwCABAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T23:46:09.864Z",
+              "WhenOpened": "2025-03-28T00:00:36.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "VacantesController.cs",
+              "DocumentMoniker": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\Controllers\\VacantesController.cs",
+              "RelativeDocumentMoniker": "project-backend\\Controllers\\VacantesController.cs",
+              "ToolTip": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\Controllers\\VacantesController.cs",
+              "RelativeToolTip": "project-backend\\Controllers\\VacantesController.cs",
+              "ViewState": "AgIAAMQAAAAAAAAAAAAgwMkAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T21:50:43.132Z",
               "EditorCaption": ""
             }
           ]

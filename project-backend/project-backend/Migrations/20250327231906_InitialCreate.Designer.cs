@@ -12,7 +12,7 @@ using project_backend.Data;
 namespace project_backend.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250321214255_InitialCreate")]
+    [Migration("20250327231906_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -171,7 +171,12 @@ namespace project_backend.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("UsuarioId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("UsuarioId");
 
                     b.ToTable("Vacantes");
                 });
@@ -227,6 +232,15 @@ namespace project_backend.Migrations
                         .IsRequired();
 
                     b.Navigation("Rol");
+                });
+
+            modelBuilder.Entity("project_backend.Models.Vacante", b =>
+                {
+                    b.HasOne("project_backend.Models.Usuario", "Usuario")
+                        .WithMany()
+                        .HasForeignKey("UsuarioId");
+
+                    b.Navigation("Usuario");
                 });
 
             modelBuilder.Entity("project_backend.Models.VacanteUsuario", b =>

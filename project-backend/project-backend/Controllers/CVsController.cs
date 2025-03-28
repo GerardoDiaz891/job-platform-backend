@@ -231,10 +231,36 @@ namespace project_backend.Controllers
             try
             {
                 var userId = GetAuthenticatedUserId();
+                var userRole = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
 
-                // Buscar el CV del usuario para la vacante especificada
-                var cv = await _context.CVs
-                    .FirstOrDefaultAsync(c => c.IdVacante == idVacante && c.IdUsuario == userId);
+                CV cv;
+
+                if (userRole == "Postulante")
+                {
+                    // Postulante solo puede descargar su propio CV para esta vacante
+                    cv = await _context.CVs
+                        .FirstOrDefaultAsync(c => c.IdVacante == idVacante && c.IdUsuario == userId);
+                }
+                else if (userRole == "Empresarial")
+                {
+                    // Empresarial puede descargar cualquier CV para sus vacantes
+                    // Primero verificar que la vacante pertenece al empresarial
+                    var vacante = await _context.Vacantes
+                        .FirstOrDefaultAsync(v => v.Id == idVacante && v.UsuarioId == userId);
+
+                    if (vacante == null)
+                    {
+                        return NotFound("Vacante no encontrada o no pertenece al usuario empresarial.");
+                    }
+
+                    // Buscar cualquier CV asociado a esta vacante
+                    cv = await _context.CVs
+                        .FirstOrDefaultAsync(c => c.IdVacante == idVacante);
+                }
+                else
+                {
+                    return Unauthorized("Rol no autorizado para esta acción.");
+                }
 
                 if (cv == null)
                 {

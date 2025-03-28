@@ -133,7 +133,7 @@ namespace project_backend.Controllers
         }
 
         // POST: api/Usuarios
-        [Authorize(Roles = "Administrador")]
+        //[Authorize(Roles = "Administrador")]
         [HttpPost]
         public async Task<ActionResult<UsuarioDTO>> PostUsuario(UsuarioDTO usuarioDTO)
         {

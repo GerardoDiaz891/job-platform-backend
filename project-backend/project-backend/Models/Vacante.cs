@@ -15,6 +15,11 @@ namespace project_backend.Models
         public string HabilidadesRequeridas { get; set; }
         public string Ubicacion { get; set; }
         public string TipoTrabajo { get; set; } // "Remoto", "Presencial", "Híbrido"
+                                                // Agrega esta propiedad
+        public int? UsuarioId { get; set; }
+
+        [ForeignKey("UsuarioId")]
+        public virtual Usuario Usuario { get; set; }
 
         public virtual ICollection<VacanteUsuario> VacanteUsuarios { get; set; } = new List<VacanteUsuario>();
 

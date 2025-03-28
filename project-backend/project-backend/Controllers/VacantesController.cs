@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -131,31 +132,24 @@ namespace project_backend.Controllers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [Authorize(Roles = "Empresarial")]
         [HttpPost]
-        public async Task<ActionResult<Vacante>> PostVacante(VacantesDTO vacantedto)
-        {   
-            Vacante vacante = new ()
+        public async Task<ActionResult<Vacante>> PostVacante([FromBody] VacantesDTO vacantedto)
+        {
+            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+
+            var vacante = new Vacante
             {
                 Nombre = vacantedto.Nombre,
                 Descripcion = vacantedto.Descripcion,
                 Salario = vacantedto.Salario,
                 Horario = vacantedto.Horario,
-                FechaPublicacion = DateTime.Now, 
+                FechaPublicacion = DateTime.Now,
                 FechaExpiracion = vacantedto.FechaExpiracion,
                 HabilidadesRequeridas = vacantedto.HabilidadesRequeridas,
                 Ubicacion = vacantedto.Ubicacion,
                 TipoTrabajo = vacantedto.TipoTrabajo,
-                
+                UsuarioId = userId
             };
-            if(vacantedto.UsuarioId != null)
-            {
-                VacanteUsuario vacanteusuario = new()
-                {
 
-                    IdUsuario = (int)vacantedto.UsuarioId,
-                    IdVacante = vacante.Id,
-                };
-            }
-            
             _context.Vacantes.Add(vacante);
             await _context.SaveChangesAsync();
 
@@ -182,6 +176,46 @@ namespace project_backend.Controllers
         private bool VacanteExists(int id)
         {
             return _context.Vacantes.Any(e => e.Id == id);
+        }
+
+        // GET: api/Vacantes/mis-vacantes
+        [Authorize(Roles = "Empresarial")]
+        [HttpGet("mis-vacantes")]
+        public async Task<ActionResult<IEnumerable<VacantesDTO>>> GetMisVacantes()
+        {
+            // ID del usuario autenticado
+            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+
+            // Obtener solo las vacantes del empresarial logeado
+            var vacantes = await _context.Vacantes
+                .Where(v => v.UsuarioId == userId)
+                .Include(v => v.CVs)
+                .ToListAsync();
+
+            var vacantesDTO = vacantes.Select(v => new VacantesDTO
+            {
+                Id = v.Id,
+                Nombre = v.Nombre,
+                Descripcion = v.Descripcion,
+                Salario = v.Salario,
+                Horario = v.Horario,
+                FechaPublicacion = v.FechaPublicacion,
+                FechaExpiracion = v.FechaExpiracion,
+                HabilidadesRequeridas = v.HabilidadesRequeridas,
+                Ubicacion = v.Ubicacion,
+                TipoTrabajo = v.TipoTrabajo,
+                UsuarioId = v.UsuarioId,
+                CVs = v.CVs.Select(cv => new CVDTO
+                {
+                    Id = cv.Id,
+                    RutaArchivo = cv.RutaArchivo,
+                    FechaSubida = cv.FechaSubida,
+                    IdUsuario = cv.IdUsuario,
+                    IdVacante = cv.IdVacante
+                }).ToList()
+            }).ToList();
+
+            return Ok(vacantesDTO);
         }
     }
 }

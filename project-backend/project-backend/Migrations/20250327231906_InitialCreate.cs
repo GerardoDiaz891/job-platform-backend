@@ -25,27 +25,6 @@ namespace project_backend.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Vacantes",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Descripcion = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Salario = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    Horario = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    FechaPublicacion = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    FechaExpiracion = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    HabilidadesRequeridas = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Ubicacion = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    TipoTrabajo = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Vacantes", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Usuarios",
                 columns: table => new
                 {
@@ -72,6 +51,33 @@ namespace project_backend.Migrations
                         principalTable: "Roles",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Vacantes",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Descripcion = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Salario = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    Horario = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    FechaPublicacion = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    FechaExpiracion = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    HabilidadesRequeridas = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Ubicacion = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    TipoTrabajo = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    UsuarioId = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Vacantes", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Vacantes_Usuarios_UsuarioId",
+                        column: x => x.UsuarioId,
+                        principalTable: "Usuarios",
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -157,6 +163,11 @@ namespace project_backend.Migrations
                 column: "IdRol");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Vacantes_UsuarioId",
+                table: "Vacantes",
+                column: "UsuarioId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_VacanteUsuario_IdUsuario",
                 table: "VacanteUsuario",
                 column: "IdUsuario");
@@ -177,10 +188,10 @@ namespace project_backend.Migrations
                 name: "VacanteUsuario");
 
             migrationBuilder.DropTable(
-                name: "Usuarios");
+                name: "Vacantes");
 
             migrationBuilder.DropTable(
-                name: "Vacantes");
+                name: "Usuarios");
 
             migrationBuilder.DropTable(
                 name: "Roles");

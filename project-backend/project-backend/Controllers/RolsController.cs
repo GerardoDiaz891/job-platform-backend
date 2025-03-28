@@ -96,7 +96,7 @@ namespace project_backend.Controllers
         }
 
         // POST: api/Rols
-        [Authorize(Roles = "Administrador")]
+        //[Authorize(Roles = "Administrador")]
         [HttpPost]
         public async Task<ActionResult<RolDTO>> PostRol(RolDTO rolDTO)
         {
