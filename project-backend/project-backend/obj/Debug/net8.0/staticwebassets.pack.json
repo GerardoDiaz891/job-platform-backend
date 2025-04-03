@@ -1,16 +1,32 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\0bc4ae93-4fe8-4c30-beed-f0b3d80ecc79.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cvs\\0bc4ae93-4fe8-4c30-beed-f0b3d80ecc79.pdf"
+    },
+    {
       "Id": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\121d0c5d-13b5-4a4b-bd53-f43ba884ea3f.pdf",
       "PackagePath": "staticwebassets\\uploads\\cvs\\121d0c5d-13b5-4a4b-bd53-f43ba884ea3f.pdf"
+    },
+    {
+      "Id": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\1b7735f3-ccfe-4100-8a87-d97e84ed6301.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cvs\\1b7735f3-ccfe-4100-8a87-d97e84ed6301.pdf"
     },
     {
       "Id": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\1c12be10-0f98-414a-9a42-a9f045aef707.pdf",
       "PackagePath": "staticwebassets\\uploads\\cvs\\1c12be10-0f98-414a-9a42-a9f045aef707.pdf"
     },
     {
+      "Id": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\33a6e7d4-25f2-4b06-8d65-e409d7cca2eb.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cvs\\33a6e7d4-25f2-4b06-8d65-e409d7cca2eb.pdf"
+    },
+    {
       "Id": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\3a0eb85d-a194-4210-af5a-5989c7db0ce8.pdf",
       "PackagePath": "staticwebassets\\uploads\\cvs\\3a0eb85d-a194-4210-af5a-5989c7db0ce8.pdf"
+    },
+    {
+      "Id": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\3bf992a6-76c8-4480-a8d4-e49990cef10d.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cvs\\3bf992a6-76c8-4480-a8d4-e49990cef10d.pdf"
     },
     {
       "Id": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\4fc9c829-baff-4b0f-b607-389a825bdc43.pdf",
@@ -19,6 +35,10 @@
     {
       "Id": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\58b6bbae-b69e-4db7-8197-56610684bedb.pdf",
       "PackagePath": "staticwebassets\\uploads\\cvs\\58b6bbae-b69e-4db7-8197-56610684bedb.pdf"
+    },
+    {
+      "Id": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\59443766-ff45-4a8b-aad8-7375cb107e75.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cvs\\59443766-ff45-4a8b-aad8-7375cb107e75.pdf"
     },
     {
       "Id": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\64ffd0b3-2e33-4d08-9aa2-1b2ef5dd0312.pdf",
@@ -31,6 +51,10 @@
     {
       "Id": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\84788537-8703-4c42-afe2-91f68e318a77.pdf",
       "PackagePath": "staticwebassets\\uploads\\cvs\\84788537-8703-4c42-afe2-91f68e318a77.pdf"
+    },
+    {
+      "Id": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\b4f413cd-c3da-4f9d-b2a5-f8844e4e4d1c.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cvs\\b4f413cd-c3da-4f9d-b2a5-f8844e4e4d1c.pdf"
     },
     {
       "Id": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\c7c56c42-ebcf-4d3c-8b4b-70717840e009.pdf",

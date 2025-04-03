@@ -30,7 +30,7 @@ namespace project_backend.Controllers
         public async Task<ActionResult<IEnumerable<UsuarioDTO>>> GetUsuarios()
         {
             var usuarios = await _context.Usuarios
-                .Include(u => u.Rol) // Incluir el Rol para obtener el nombre
+                .Include(u => u.Rol) // Incluir Rol para obtener el nombre
                 .ToListAsync();
 
             var usuariosDTO = usuarios.Select(u => new UsuarioDTO
@@ -72,7 +72,7 @@ namespace project_backend.Controllers
                 Nombre = usuario.Nombre,
                 Correo = usuario.Correo,
                 IdRol = usuario.IdRol,
-                NombreRol = usuario.Rol?.Nombre, // Nombre del Rol
+                NombreRol = usuario.Rol?.Nombre,
                 NombreEmpresa = usuario.NombreEmpresa,
                 TipoEmpresa = usuario.TipoEmpresa,
                 Direccion = usuario.Direccion,
@@ -95,23 +95,37 @@ namespace project_backend.Controllers
                 return BadRequest();
             }
 
-            var usuario = new Usuario
+            // Obtener el usuario existente
+            var usuarioExistente = await _context.Usuarios.FindAsync(id);
+            if (usuarioExistente == null)
             {
-                Id = usuarioDTO.Id,
-                Nombre = usuarioDTO.Nombre,
-                Correo = usuarioDTO.Correo,
-                Contraseña = usuarioDTO.Contraseña, // Asegúrate de hashear la contraseña si es necesario
-                IdRol = usuarioDTO.IdRol,
-                NombreEmpresa = usuarioDTO.NombreEmpresa,
-                TipoEmpresa = usuarioDTO.TipoEmpresa,
-                Direccion = usuarioDTO.Direccion,
-                Telefono = usuarioDTO.Telefono,
-                SitioWeb = usuarioDTO.SitioWeb,
-                DescripcionEmpresa = usuarioDTO.DescripcionEmpresa,
-                IdCV = usuarioDTO.IdCV
-            };
+                return NotFound();
+            }
 
-            _context.Entry(usuario).State = EntityState.Modified;
+            // Verificar si el rol existe
+            var rolExistente = await _context.Roles.FindAsync(usuarioDTO.IdRol);
+            if (rolExistente == null)
+            {
+                return BadRequest("El rol especificado no existe.");
+            }
+
+            // Actualizar solo los campos permitidos
+            usuarioExistente.Nombre = usuarioDTO.Nombre;
+            usuarioExistente.Correo = usuarioDTO.Correo;
+            usuarioExistente.IdRol = usuarioDTO.IdRol;
+            usuarioExistente.NombreEmpresa = usuarioDTO.NombreEmpresa;
+            usuarioExistente.TipoEmpresa = usuarioDTO.TipoEmpresa;
+            usuarioExistente.Direccion = usuarioDTO.Direccion;
+            usuarioExistente.Telefono = usuarioDTO.Telefono;
+            usuarioExistente.SitioWeb = usuarioDTO.SitioWeb;
+            usuarioExistente.DescripcionEmpresa = usuarioDTO.DescripcionEmpresa;
+            usuarioExistente.IdCV = usuarioDTO.IdCV;
+
+            // Actualizar contraseña solo si se proporcionó una nueva
+            if (!string.IsNullOrEmpty(usuarioDTO.Contraseña))
+            {
+                usuarioExistente.SetPassword(usuarioDTO.Contraseña);
+            }
 
             try
             {
@@ -149,7 +163,7 @@ namespace project_backend.Controllers
             {
                 Nombre = usuarioDTO.Nombre,
                 Correo = usuarioDTO.Correo,
-                Contraseña = usuarioDTO.Contraseña, // HASHEAR CONTRASEÑAS
+                Contraseña = usuarioDTO.Contraseña,
                 IdRol = usuarioDTO.IdRol,
                 NombreEmpresa = usuarioDTO.NombreEmpresa,
                 TipoEmpresa = usuarioDTO.TipoEmpresa,

@@ -55,7 +55,7 @@ namespace project_backend.Controllers
                 return BadRequest("El correo ya está registrado.");
             }
 
-            // Verificar si las contraseñas coinciden (asumiendo que se envían confirmadas desde el frontend)
+            // Verificar si las contraseñas coinciden
             if (string.IsNullOrEmpty(usuarioDTO.Contraseña))
             {
                 return BadRequest("La contraseña no puede estar vacía.");
@@ -121,7 +121,7 @@ namespace project_backend.Controllers
 
     }
 
-    // Clase para manejar la solicitud de inicio de sesión
+    // SOLICITUDES DE INICIO DE SESIÓN
     public class LoginRequest
     {
         public string Correo { get; set; }

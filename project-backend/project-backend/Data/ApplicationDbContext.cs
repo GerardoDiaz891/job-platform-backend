@@ -18,40 +18,40 @@ namespace project_backend.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            // Configuración de la relación Usuario -> Rol
+            // Relación Usuario -> Rol
             modelBuilder.Entity<Usuario>()
                 .HasOne(u => u.Rol) // Un Usuario tiene un Rol
-                .WithMany() // Un Rol puede tener muchos Usuarios (pero no se expone en el modelo Rol)
-                .HasForeignKey(u => u.IdRol) // Clave foránea en Usuario
-                .OnDelete(DeleteBehavior.Restrict); // Evita la eliminación en cascada
+                .WithMany() // Un Rol puede tener muchos Usuarios
+                .HasForeignKey(u => u.IdRol) // Foreignkey en Usuario
+                .OnDelete(DeleteBehavior.Restrict); // Evita eliminación en cascada
 
-            // Configuración de la relación Usuario -> CV (uno a uno)
+            // Usuario -> CV (uno a uno)
             modelBuilder.Entity<CV>()
                 .HasOne(c => c.Usuario) // Un CV tiene un Usuario
                 .WithOne(u => u.CV) // Un Usuario tiene un CV
-                .HasForeignKey<CV>(c => c.IdUsuario) // Clave foránea en CV
+                .HasForeignKey<CV>(c => c.IdUsuario) // Foreignkey en CV
                 .OnDelete(DeleteBehavior.Cascade); // Elimina el CV si se elimina el usuario
 
-            // Configuración de la relación CV -> Vacante (muchos a uno)
+            // CV -> Vacante (muchos a uno)
             modelBuilder.Entity<CV>()
-                .HasOne(c => c.Vacante) // Un CV tiene una Vacante
-                .WithMany(v => v.CVs) // Una Vacante puede tener muchos CVs
-                .HasForeignKey(c => c.IdVacante) // Clave foránea en CV
+                .HasOne(c => c.Vacante) // Un CV una Vacante
+                .WithMany(v => v.CVs) // Una Vacante muchos CVs
+                .HasForeignKey(c => c.IdVacante) // Foreignkey en CV
                 .OnDelete(DeleteBehavior.Cascade); // Elimina el CV si se elimina la vacante
 
-            // Configuración de la relación Usuario -> VacanteUsuario (muchos a muchos)
+            // Usuario -> VacanteUsuario (muchos a muchos)
             modelBuilder.Entity<Usuario>()
                 .HasMany(u => u.VacanteUsuarios)
                 .WithOne(vu => vu.Usuario)
                 .HasForeignKey(vu => vu.IdUsuario)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            // Configurar el nombre del rol como único
+            // Nombre del rol es único
             modelBuilder.Entity<Rol>()
                 .HasIndex(r => r.Nombre)
                 .IsUnique();
 
-            // Configurar el correo del usuario como único
+            // Correo del usuario como único
             modelBuilder.Entity<Usuario>()
                 .HasIndex(u => u.Correo)
                 .IsUnique();

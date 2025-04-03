@@ -6,13 +6,15 @@ using project_backend.Services;
 using System.Text;
 using Microsoft.OpenApi.Models;
 
+// Punto de entrada para configurar los servicios de ASP.NET Core
 var builder = WebApplication.CreateBuilder(args);
 
-// Configurar Entity Framework Core
+// Entity Framework Core - Configuraciones de la BD - SQL proveedor
+// Contexto de la BD sea injectado en Controladores y servicios
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Configurar autenticaci�n JWT
+// Autenticacion JWT - Esquema de autenticacion Bearer de JWT
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
@@ -24,6 +26,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidateIssuerSigningKey = true,
             ValidIssuer = builder.Configuration["Jwt:Issuer"],
             ValidAudience = builder.Configuration["Jwt:Audience"],
+            // Clave secreta para verificar firma
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
         };
     });
@@ -47,19 +50,19 @@ builder.Services.AddAuthorization(options =>
     options.AddPolicy("EmpresarialOnly", policy => policy.RequireRole("Empresarial"));
     options.AddPolicy("PostulanteOnly", policy => policy.RequireRole("Postulante"));
 });
-// Configurar Swagger
+// Configuraciones del SWAGGER
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "Job-PlatformBackend", Version = "v1" });
 
-    // Configuración para admitir JWT en Swagger
+    // Configuración para JWT en SWAGGER
     var securityScheme = new OpenApiSecurityScheme
     {
-        Name = "Authorization",
+        Name = "Authorization", // nombre de Header
         Description = "Enter JWT Bearer token",
-        In = ParameterLocation.Header,
+        In = ParameterLocation.Header, // Token en el header
         Type = SecuritySchemeType.Http,
         Scheme = "bearer",
         BearerFormat = "JWT",
@@ -79,11 +82,11 @@ builder.Services.AddSwaggerGen(c =>
 
     c.AddSecurityRequirement(securityRequirement);
 });
-builder.Services.AddScoped<TokenService>();
+builder.Services.AddScoped<TokenService>(); // Instancia de servicio para solicitudes HTTP
 
 var app = builder.Build();
 
-// Middleware pipeline
+// Middleware pipeline para flujo de solicitudes
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -93,12 +96,13 @@ if (app.Environment.IsDevelopment())
 //Habilitar CORS
 app.UseCors("AllowOrigins");
 
+// Solicitudes HTTP a HTTPS 
 app.UseHttpsRedirection();
 
-// Habilitar el middleware para servir archivos est�ticos
+// Habilitar middleware para los CVs
 app.UseStaticFiles();
 
-app.UseAuthentication(); // Aseg�rate de que esto est� antes de UseAuthorization
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

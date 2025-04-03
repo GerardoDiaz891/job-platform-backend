@@ -128,6 +128,13 @@ namespace project_backend.Controllers
                 return NotFound();
             }
 
+            // Verificar si hay usuarios con este rol
+            var usuariosConEsteRol = await _context.Usuarios.AnyAsync(u => u.IdRol == id);
+            if (usuariosConEsteRol)
+            {
+                return BadRequest("No se puede eliminar el rol porque hay usuarios asignados a él.");
+            }
+
             _context.Roles.Remove(rol);
             await _context.SaveChangesAsync();
 
