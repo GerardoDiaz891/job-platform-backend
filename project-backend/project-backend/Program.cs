@@ -5,9 +5,39 @@ using project_backend.Data;
 using project_backend.Services;
 using System.Text;
 using Microsoft.OpenApi.Models;
+using Microsoft.AspNetCore.RateLimiting;
+using System.Threading.RateLimiting;
 
 // Punto de entrada para configurar los servicios de ASP.NET Core
 var builder = WebApplication.CreateBuilder(args);
+
+// Rate Limiting - Para limitar petición y evitar ataques de fuerza bruta
+builder.Services.AddRateLimiter(rateLimiterOptions =>
+{
+    // POLÍTICA GLOBAL PARA TODOS LOS ENDPOINTS
+    rateLimiterOptions.AddFixedWindowLimiter("GlobalPolicy", options =>
+    {
+        options.PermitLimit = 100;
+        options.Window = TimeSpan.FromMinutes(1);
+        options.QueueProcessingOrder = QueueProcessingOrder.OldestFirst;
+        options.QueueLimit = 5; // Peticiones en cola
+    });
+
+    // Políticas estrictas para Login y Register
+    rateLimiterOptions.AddFixedWindowLimiter("AuthPolicy", options =>
+    {
+        options.PermitLimit = 5;
+        options.Window = TimeSpan.FromMinutes(1);
+        options.QueueLimit = 0;
+    });
+
+    rateLimiterOptions.OnRejected = async (context, token) =>
+    {
+        context.HttpContext.Response.StatusCode = StatusCodes.Status429TooManyRequests;
+        await context.HttpContext.Response.WriteAsync(
+            "Demasiadas solicitudes. Por favor intente de nuevo más tarde.", token);
+    };
+});
 
 // Entity Framework Core - Configuraciones de la BD - SQL proveedor
 // Contexto de la BD sea injectado en Controladores y servicios
@@ -105,6 +135,6 @@ app.UseStaticFiles();
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.MapControllers();
+app.MapControllers().RequireRateLimiting("GlobalPolicy");
 
 app.Run();

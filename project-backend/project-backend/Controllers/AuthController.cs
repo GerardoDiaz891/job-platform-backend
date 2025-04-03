@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
 using project_backend.Data;
 using project_backend.DTOs;
@@ -22,6 +23,7 @@ namespace project_backend.Controllers
         }
 
         // Endpoint para iniciar sesión
+        [EnableRateLimiting("AuthPolicy")]
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginRequest request)
         {
@@ -43,6 +45,7 @@ namespace project_backend.Controllers
         }
 
         // Endpoint para registro de usuarios
+        [EnableRateLimiting("AuthPolicy")]
         [HttpPost("register")]
         public async Task<ActionResult<UsuarioDTO>> Register([FromBody] UsuarioDTO usuarioDTO)
         {
