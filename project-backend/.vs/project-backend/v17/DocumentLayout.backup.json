@@ -5,6 +5,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{3550191F-4A5A-4C7F-BDD6-222533763E43}|project-backend\\project-backend.csproj|c:\\users\\vampy\\onedrive\\desktop\\job-platform-backend\\project-backend\\project-backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3550191F-4A5A-4C7F-BDD6-222533763E43}|project-backend\\project-backend.csproj|solutionrelative:project-backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3550191F-4A5A-4C7F-BDD6-222533763E43}|project-backend\\project-backend.csproj|c:\\users\\vampy\\onedrive\\desktop\\job-platform-backend\\project-backend\\project-backend\\middleware\\tokenblacklistmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3550191F-4A5A-4C7F-BDD6-222533763E43}|project-backend\\project-backend.csproj|solutionrelative:project-backend\\middleware\\tokenblacklistmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3550191F-4A5A-4C7F-BDD6-222533763E43}|project-backend\\project-backend.csproj|c:\\users\\vampy\\onedrive\\desktop\\job-platform-backend\\project-backend\\project-backend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3550191F-4A5A-4C7F-BDD6-222533763E43}|project-backend\\project-backend.csproj|solutionrelative:project-backend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3550191F-4A5A-4C7F-BDD6-222533763E43}|project-backend\\project-backend.csproj|c:\\users\\vampy\\onedrive\\desktop\\job-platform-backend\\project-backend\\project-backend\\models\\invalidtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3550191F-4A5A-4C7F-BDD6-222533763E43}|project-backend\\project-backend.csproj|solutionrelative:project-backend\\models\\invalidtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,9 +36,48 @@
               "RelativeDocumentMoniker": "project-backend\\Program.cs",
               "ToolTip": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\Program.cs",
               "RelativeToolTip": "project-backend\\Program.cs",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAmwGMAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAAAIkAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T22:31:01.047Z",
+              "WhenOpened": "2025-04-04T20:30:11.172Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TokenBlacklistMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\Middleware\\TokenBlacklistMiddleware.cs",
+              "RelativeDocumentMoniker": "project-backend\\Middleware\\TokenBlacklistMiddleware.cs",
+              "ToolTip": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\Middleware\\TokenBlacklistMiddleware.cs",
+              "RelativeToolTip": "project-backend\\Middleware\\TokenBlacklistMiddleware.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T20:29:41.525Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "project-backend\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "project-backend\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAQwI4AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T20:28:35.306Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "InvalidToken.cs",
+              "DocumentMoniker": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\Models\\InvalidToken.cs",
+              "RelativeDocumentMoniker": "project-backend\\Models\\InvalidToken.cs",
+              "ToolTip": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\Models\\InvalidToken.cs",
+              "RelativeToolTip": "project-backend\\Models\\InvalidToken.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T20:26:24.194Z",
               "EditorCaption": ""
             }
           ]

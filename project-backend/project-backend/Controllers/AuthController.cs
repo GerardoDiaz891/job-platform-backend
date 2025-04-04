@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
 using project_backend.Data;
 using project_backend.DTOs;
 using project_backend.Models;
 using project_backend.Services;
+using System.IdentityModel.Tokens.Jwt;
 using System.Threading.Tasks;
 
 namespace project_backend.Controllers
@@ -120,6 +122,33 @@ namespace project_backend.Controllers
             };
 
             return CreatedAtAction(nameof(Login), usuarioResponse);
+        }
+
+        [Authorize]
+        [HttpPost("logout")]
+        public async Task<IActionResult> Logout()
+        {
+            var token = Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
+            if (string.IsNullOrEmpty(token))
+            {
+                return BadRequest("No se proporcionó un token.");
+            }
+
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var jwtToken = tokenHandler.ReadJwtToken(token);
+            var expiresAt = jwtToken.ValidTo;
+
+            var invalidToken = new InvalidToken
+            {
+                Token = token,
+                InvalidatedAt = DateTime.UtcNow,
+                ExpiresAt = expiresAt
+            };
+
+            _context.InvalidTokens.Add(invalidToken);
+            await _context.SaveChangesAsync();
+
+            return Ok("Sesión cerrada exitosamente.");
         }
 
     }

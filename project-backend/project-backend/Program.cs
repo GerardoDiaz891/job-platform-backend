@@ -7,6 +7,7 @@ using System.Text;
 using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.RateLimiting;
 using System.Threading.RateLimiting;
+using project_backend.Middleware;
 
 // Punto de entrada para configurar los servicios de ASP.NET Core
 var builder = WebApplication.CreateBuilder(args);
@@ -134,6 +135,7 @@ app.UseStaticFiles();
 
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseTokenBlacklist(); // Agregar antes de los endpoint
 
 app.MapControllers().RequireRateLimiting("GlobalPolicy");
 

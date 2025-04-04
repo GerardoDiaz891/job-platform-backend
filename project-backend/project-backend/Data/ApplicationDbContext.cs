@@ -13,6 +13,7 @@ namespace project_backend.Data
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<CV> CVs { get; set; }
         public DbSet<Vacante> Vacantes { get; set; }
+        public DbSet<InvalidToken> InvalidTokens { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

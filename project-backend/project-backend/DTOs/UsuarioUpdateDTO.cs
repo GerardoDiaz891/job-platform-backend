@@ -3,7 +3,7 @@
     public class UsuarioUpdateDTO
     {
         public string Nombre { get; set; }
-        public string Contraseña { get; set; }
+        public string? Contraseña { get; set; }
         public string NombreEmpresa { get; set; }
         public string TipoEmpresa { get; set; }
         public string Direccion { get; set; }
