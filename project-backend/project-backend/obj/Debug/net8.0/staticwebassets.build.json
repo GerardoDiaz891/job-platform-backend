@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "W7ZJHx1rP1KwxkjC3LQ5MHx4L+W5dfLjQ8M6rqbiquc=",
+  "Hash": "hos3XXAHqQ1dsI6Xd7l+zU7VaCG57Xo0NKdoNyPS6Is=",
   "Source": "project-backend",
   "BasePath": "_content/project-backend",
   "Mode": "Default",
@@ -57,6 +57,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\cvs\\121d0c5d-13b5-4a4b-bd53-f43ba884ea3f.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\125e8521-7dfb-4576-b410-be59a8b65633.pdf",
+      "SourceId": "project-backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\",
+      "BasePath": "_content/project-backend",
+      "RelativePath": "uploads/cvs/125e8521-7dfb-4576-b410-be59a8b65633#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1rwdjnuk9j",
+      "Integrity": "DXaby8r5pdclb+bzpKcIs5haeVa1LIV+qFK4hOL248c=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\cvs\\125e8521-7dfb-4576-b410-be59a8b65633.pdf"
     },
     {
       "Identity": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\1b7735f3-ccfe-4100-8a87-d97e84ed6301.pdf",
@@ -330,6 +351,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\cvs\\74f234f0-73bf-4ca9-a4e8-30750b0290c6.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\8354b1df-5c38-4f0a-bc5a-566b0250e209.pdf",
+      "SourceId": "project-backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\",
+      "BasePath": "_content/project-backend",
+      "RelativePath": "uploads/cvs/8354b1df-5c38-4f0a-bc5a-566b0250e209#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1rwdjnuk9j",
+      "Integrity": "DXaby8r5pdclb+bzpKcIs5haeVa1LIV+qFK4hOL248c=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\cvs\\8354b1df-5c38-4f0a-bc5a-566b0250e209.pdf"
     },
     {
       "Identity": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\84788537-8703-4c42-afe2-91f68e318a77.pdf",
@@ -641,6 +683,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-23uY49SnRdyjG5S5yW1un1Vr5G/dMmsoBCOVufJt8RY="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/cvs/125e8521-7dfb-4576-b410-be59a8b65633.1rwdjnuk9j.pdf",
+      "AssetFile": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\125e8521-7dfb-4576-b410-be59a8b65633.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "70836"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DXaby8r5pdclb+bzpKcIs5haeVa1LIV+qFK4hOL248c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Apr 2025 23:34:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1rwdjnuk9j"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/cvs/125e8521-7dfb-4576-b410-be59a8b65633.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-DXaby8r5pdclb+bzpKcIs5haeVa1LIV+qFK4hOL248c="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/cvs/125e8521-7dfb-4576-b410-be59a8b65633.pdf",
+      "AssetFile": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\125e8521-7dfb-4576-b410-be59a8b65633.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "70836"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DXaby8r5pdclb+bzpKcIs5haeVa1LIV+qFK4hOL248c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Apr 2025 23:34:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-DXaby8r5pdclb+bzpKcIs5haeVa1LIV+qFK4hOL248c="
         }
       ]
     },
@@ -1707,6 +1831,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-23uY49SnRdyjG5S5yW1un1Vr5G/dMmsoBCOVufJt8RY="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/cvs/8354b1df-5c38-4f0a-bc5a-566b0250e209.1rwdjnuk9j.pdf",
+      "AssetFile": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\8354b1df-5c38-4f0a-bc5a-566b0250e209.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "70836"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DXaby8r5pdclb+bzpKcIs5haeVa1LIV+qFK4hOL248c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Apr 2025 21:46:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1rwdjnuk9j"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/cvs/8354b1df-5c38-4f0a-bc5a-566b0250e209.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-DXaby8r5pdclb+bzpKcIs5haeVa1LIV+qFK4hOL248c="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/cvs/8354b1df-5c38-4f0a-bc5a-566b0250e209.pdf",
+      "AssetFile": "C:\\Users\\vampy\\OneDrive\\Desktop\\job-platform-backend\\project-backend\\project-backend\\wwwroot\\uploads\\cvs\\8354b1df-5c38-4f0a-bc5a-566b0250e209.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "70836"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DXaby8r5pdclb+bzpKcIs5haeVa1LIV+qFK4hOL248c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Apr 2025 21:46:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-DXaby8r5pdclb+bzpKcIs5haeVa1LIV+qFK4hOL248c="
         }
       ]
     },
